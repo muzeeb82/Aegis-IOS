@@ -8,7 +8,7 @@ Status: Draft (Pending Validation)
 Owner: Chief Architect / Product Owner
 Classification: Informational — Baseline readiness checklist
 Authority Level: Not Applicable — Informational checklist outside the normative authority hierarchy
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, ARCH-MANIFEST-001, SPEC-001
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, ARCH-MANIFEST-001, SPEC-001
 Referenced By: None identified
 Last Updated: 2026-08-08
 Change ID: CHG-003
@@ -50,6 +50,7 @@ This document defines readiness criteria. Unchecked boxes do not indicate failur
 - [ ] CHG-004 is present with a Passed and Closed record.
 - [ ] CHG-005 is present with a Passed and Closed record.
 - [ ] CHG-006 is present with a Passed and Closed record.
+- [ ] CHG-007 is present with a Passed and Closed record.
 
 ### Content integrity
 
@@ -99,5 +100,61 @@ Release Tag: Not Approved
 | 0.1.0 | 2026-08-08 | Added missing direct dependencies and the CHG-004 closure criterion while preserving Draft and unexecuted state. | Chief Architect / Product Owner | CHG-004 |
 | 0.1.0 | 2026-08-08 | Added CHG-004 provenance, CHG-005 dependency, and an unchecked CHG-005 closure criterion. The header Change ID remains CHG-003 as the originating creation record; subsequent changes are identified here. | Chief Architect / Product Owner | CHG-005 |
 | 0.1.0 | 2026-08-08 | Added CHG-006 dependency and unchecked closure criterion for Architecture Manifest approval. | Chief Architect / Product Owner | CHG-006 |
+| 0.1.0 | 2026-08-08 | Draft branch proposal adds CHG-007 dependency, unchecked closure criterion, and the proposed Phase C4 execution/tag decision below. No execution or approval is claimed. | Chief Architect / Product Owner | CHG-007 (Pending Approval) |
 
 **RRC-001 Status:** **Draft — Pending Validation**
+
+## 6. Proposed Phase C4 Execution Package
+
+**Package Status:** **Draft — Pending External Review and Approval**
+
+This section defines the proposed execution approach. It does not mark any checklist item complete and does not alter §4's `Not Executed` record.
+
+### 6.1 Proposed Release Tag Decision
+
+```text
+Decision Status: Proposed — Pending Approval
+Tag Name: v5.0.0-governance-baseline
+Tag Target: The final master commit containing the Approved and Closed RRC-001 execution record
+Tag Type: Annotated Git tag
+Tag Creation Condition: Only after approved Phase C4 changes are merged to master and RRC-001 executes with a Passed result
+```
+
+Approval of the Draft package would approve this tag name and target definition. It would not create the tag or establish that the target commit already exists.
+
+### 6.2 Proposed Execution Sequence
+
+1. Receive external approval for CHG-007 and this RRC-001 execution package.
+2. Implement CHG-007's approved three-file scope.
+3. Validate and close CHG-007.
+4. Merge the approved Draft branch into local `master`.
+5. Synchronize and validate local and remote `master`.
+6. Execute every mandatory RRC-001 criterion against the actual final repository state.
+7. Record actual evidence, release commit definition, validator, date, and result in §4.
+8. Mark only criteria that actually pass as checked.
+9. Commit and push the Approved and Closed RRC-001 record.
+10. Create `v5.0.0-governance-baseline` targeting that final closure commit.
+11. Verify the local and remote tag targets match.
+
+### 6.3 Proposed Closure Conditions
+
+RRC-001 and Phase C4 may close only when:
+
+- CHG-007 is Passed and Closed.
+- Every mandatory criterion in §2 is executed and Passed.
+- The working tree is clean at validation time.
+- Local and remote `master` match.
+- The release commit is uniquely identified as the commit containing the final RRC-001 closure record.
+- The approved tag name and target definition remain unchanged.
+- No unresolved mandatory governance conflict exists.
+
+### 6.4 Explicit Non-Outcomes
+
+This Draft package does not:
+
+- Approve or implement CHG-007.
+- Execute RRC-001.
+- Mark any criterion Passed.
+- Close RRC-001 or Phase C4.
+- Merge anything into `master`.
+- Create a release tag.
