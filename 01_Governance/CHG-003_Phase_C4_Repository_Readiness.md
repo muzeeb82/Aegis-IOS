@@ -17,7 +17,7 @@ Last Updated: 2026-08-07
 
 ```text
 Change ID: CHG-003
-Change Lifecycle State: Implemented
+Change Lifecycle State: Implemented — Pending Validation
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
