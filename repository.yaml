@@ -1,0 +1,5 @@
+repository:
+  name: Aegis IOS
+  architecture_manifest: Architecture_Manifest.md
+  constitution: 00_Foundation/CONST-001_Aegis_IOS_Constitution.md
+  governance_model: 01_Governance/GOV-001_Governance_Model.md
