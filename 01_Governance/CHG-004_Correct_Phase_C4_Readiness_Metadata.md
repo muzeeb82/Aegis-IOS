@@ -108,6 +108,7 @@ No other file was authorized to change.
 - Confirm RRC-001 remains v0.1.0, Draft, and unexecuted.
 - Confirm no tag name or target was approved through CHG-004.
 - Confirm no file outside the approved scope changed.
+- Confirm CHG-004 contains the complete validated Review and Approval evidence, including Evidence Reviewed, Approval Basis, field-level Authorized Scope, and all Approval Conditions.
 - Confirm `git diff --check` and `git fsck --no-dangling` pass.
 
 ## 8. Explicit Exclusions
@@ -132,23 +133,55 @@ Review Scope: Dependency accuracy, correction necessity, implementation boundari
 Review Result: Passed — Ready for Approval
 ```
 
-### 10.1 Review Findings
+### 10.1 Evidence Reviewed
 
-- The CHG-001 and CHG-002 inconsistencies were header-only defects; both bodies contained complete Passed validation and Closed closure evidence.
-- RRC-001 directly relied on ARCH-MANIFEST-001 and SPEC-001 but omitted both from `Depends On`.
-- RRC-001 must cover CHG-004 as the corrective record required to make the checklist executable.
-- CHG-003 was contextual provenance, not an operative dependency.
-- Minor classification was appropriate.
-- Tag-name and tag-target approval remained excluded.
+The Review examined:
 
-### 10.2 Scope Review
+- CHG-001's header lifecycle field and its Passed validation and Closed closure evidence.
+- CHG-002's header lifecycle field and its Passed validation and Closed closure evidence.
+- RRC-001's current `Depends On` value.
+- RRC-001's mandatory approved-artifact and change-record criteria.
+- GOV-003 §9.6 change-record lifecycle representation.
+- GOV-003 §15.1 direct operative dependency requirements.
+- CHG-004's proposed four-file implementation boundary.
+- CHG-004's validation plan and explicit exclusions.
+- The absence of an approved release tag name or target.
 
-- CHG-001 shall preserve all content outside `Change Lifecycle State` and `Last Updated` unchanged.
-- CHG-002 shall preserve all content outside `Change Lifecycle State` and `Last Updated` unchanged.
-- RRC-001 shall change only `Depends On`, `Last Updated`, and the addition of one unchecked CHG-004 criterion.
-- CHG-004 shall record its governed lifecycle evidence as each stage occurs.
+### 10.2 Review Findings
 
-### 10.3 Review Decision
+1. CHG-001's header lifecycle field was inconsistent with its final lifecycle evidence.
+2. CHG-002's header lifecycle field was inconsistent with its final lifecycle evidence.
+3. Both inconsistencies were header-only defects; their bodies contained completed Review, Approval, Implementation, Validation, and Closure evidence.
+4. RRC-001 directly relied on ARCH-MANIFEST-001 and SPEC-001 but omitted both from `Depends On`.
+5. RRC-001 had to cover CHG-004 as the corrective record required to make the readiness checklist executable.
+6. CHG-003 provided historical context for the audit but was not an operative dependency of CHG-004. Its removal from `Depends On` was correct.
+7. The proposed implementation changed no canonical ownership, authority, architecture decision, product requirement, or release decision.
+8. Minor classification was appropriate.
+9. Tag-name and tag-target approval remained correctly excluded.
+
+### 10.3 Scope Review
+
+The permitted target changes were limited to:
+
+1. CHG-001:
+   - Change the header lifecycle field to `Closed`.
+   - Update `Last Updated`.
+   - Preserve all content outside the two authorized fields—`Change Lifecycle State` and `Last Updated`—unchanged.
+2. CHG-002:
+   - Change the header lifecycle field to `Closed`.
+   - Update `Last Updated`.
+   - Preserve all content outside the two authorized fields—`Change Lifecycle State` and `Last Updated`—unchanged.
+3. RRC-001:
+   - Add ARCH-MANIFEST-001, SPEC-001, and CHG-004 to `Depends On`.
+   - Add one unchecked mandatory CHG-004 Passed-and-Closed criterion.
+   - Preserve its Draft, unexecuted state.
+   - Update `Last Updated`.
+4. CHG-004:
+   - Record its governed Review, Approval, Implementation, Validation, and Closure evidence as each stage occurred.
+
+No other artifact or field was within scope.
+
+### 10.4 Review Decision
 
 **Decision: Passed — Ready for Approval.**
 
@@ -165,28 +198,51 @@ Approved Scope: Correct Phase C4 readiness metadata and checklist coverage
 Approval Result: Approved with Conditions
 ```
 
-### 11.1 Authorized Scope
+### 11.1 Approval Basis
+
+Approval was based on:
+
+- The completed Impact Assessment.
+- The validated Review in §10.
+- The confirmed header/body contradictions in CHG-001 and CHG-002.
+- The confirmed direct-dependency omissions in RRC-001.
+- The requirement for RRC-001 to cover CHG-004 itself.
+- The corrected dependency treatment of CHG-003 as contextual provenance rather than operative reliance.
+- The field-level implementation boundaries.
+- The strengthened line-level diff validation method.
+- The explicit exclusion of release-tag decisions.
+
+### 11.2 Authorized Scope
 
 Approval authorized only:
 
-1. Creation of CHG-004 with the validated proposal, Review, and Approval evidence.
-2. The two authorized metadata-field corrections in CHG-001.
-3. The two authorized metadata-field corrections in CHG-002.
-4. The three authorized RRC-001 changes defined in §10.2.
-5. Recording implementation and validation evidence in CHG-004 before closure.
+1. Create CHG-004 with the validated proposal, Review, and Approval evidence.
+2. In CHG-001:
+   - Change `Change Lifecycle State: Impact Assessed` to `Change Lifecycle State: Closed`.
+   - Change `Last Updated` to `2026-08-08`.
+3. In CHG-002:
+   - Change `Change Lifecycle State: Impact Assessed` to `Change Lifecycle State: Closed`.
+   - Change `Last Updated` to `2026-08-08`.
+4. In RRC-001:
+   - Add ARCH-MANIFEST-001, SPEC-001, and CHG-004 to `Depends On`.
+   - Add one unchecked mandatory criterion stating that CHG-004 is present with a Passed and Closed record.
+   - Change `Last Updated` to `2026-08-08`.
+5. Record implementation and validation evidence in CHG-004 before closure.
 
-### 11.2 Approval Conditions
+### 11.3 Approval Conditions
 
 - No file outside the four named artifacts may change.
+- CHG-001 content outside `Change Lifecycle State` and `Last Updated` shall remain unchanged.
+- CHG-002 content outside `Change Lifecycle State` and `Last Updated` shall remain unchanged.
 - RRC-001 shall remain v0.1.0, Draft, and unexecuted.
-- The CHG-004 checklist criterion shall remain unchecked.
+- The new CHG-004 checklist criterion shall remain unchecked.
 - No tag name or target is approved through this change.
 - No release tag may be created.
 - Phase C4 shall remain open.
 - Validation shall use line-level diffs against the pre-implementation commit.
 - Implementation and Validation evidence shall remain distinct.
 
-### 11.3 Approval Decision
+### 11.4 Approval Decision
 
 **CHG-004 was Approved — Pending Implementation.**
 
@@ -210,6 +266,7 @@ Pre-Implementation Commit: 46220d29cd9e4c5c187344891635b3d6f32fbee8
 4. Updated RRC-001 `Last Updated` to `2026-08-08`.
 5. Added the unchecked CHG-004 Passed-and-Closed mandatory criterion to RRC-001.
 6. Created this CHG-004 record with the validated proposal, Review, Approval, and implementation evidence.
+7. Restored the complete validated Review and Approval evidence after a pre-closure self-check identified undocumented condensation in the initially committed record.
 
 ### 12.2 Implementation Boundaries
 
@@ -232,3 +289,4 @@ Implementation is complete within the Approved Scope. No Validation, Closure, RR
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 1.0.0 | 2026-08-08 | Initial Minor change record through Approved and Implemented, correcting Phase C4 readiness metadata and checklist coverage. | Chief Architect / Product Owner | CHG-004 |
+| 1.0.0 | 2026-08-08 | Restored complete validated Review and Approval evidence and added a self-fidelity validation check before closure. | Chief Architect / Product Owner | CHG-004 |
