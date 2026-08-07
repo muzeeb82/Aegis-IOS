@@ -3,7 +3,7 @@
 **Document ID:** ARCH-MANIFEST-001
 **Title:** Architecture Manifest
 **Version:** 1.0.0
-**Status:** Draft — Pending Validation
+**Status:** Approved
 **Owner:** Chief Architect / Product Owner
 **Classification:** Informational
 **Authority Level:** Not Applicable — Informational repository map outside the normative authority hierarchy
@@ -147,3 +147,4 @@ Repository growth shall preserve canonical ownership, stable identity, explicit 
 | 0.1.0 | 2026-08-07 | Reserved placeholder with the approved ten-section outline. | Chief Architect / Product Owner | Not applicable — predates GOV-002 change records |
 | 1.0.0 | 2026-08-07 | Proposed Phase C4 repository manifest establishing the repository map, reading order, responsibility boundaries, lifecycle, and expansion rules. | Chief Architect / Product Owner | CHG-003 |
 | 1.0.0 | 2026-08-08 | Corrected `Referenced By` to represent governed-artifact consumers truthfully; README.md and repository.yaml remain supporting links rather than governed-artifact consumers. | Chief Architect / Product Owner | CHG-005 |
+| 1.0.0 | 2026-08-08 | Validated against the live repository structure and approved as the Informational repository map. | Chief Architect / Product Owner | CHG-006 |

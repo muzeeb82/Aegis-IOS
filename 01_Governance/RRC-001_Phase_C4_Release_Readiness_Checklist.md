@@ -8,7 +8,7 @@ Status: Draft (Pending Validation)
 Owner: Chief Architect / Product Owner
 Classification: Informational — Baseline readiness checklist
 Authority Level: Not Applicable — Informational checklist outside the normative authority hierarchy
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, ARCH-MANIFEST-001, SPEC-001
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, ARCH-MANIFEST-001, SPEC-001
 Referenced By: None identified
 Last Updated: 2026-08-08
 Change ID: CHG-003
@@ -49,6 +49,7 @@ This document defines readiness criteria. Unchecked boxes do not indicate failur
 - [ ] CHG-003 is reviewed, approved, implemented, validated, and closed.
 - [ ] CHG-004 is present with a Passed and Closed record.
 - [ ] CHG-005 is present with a Passed and Closed record.
+- [ ] CHG-006 is present with a Passed and Closed record.
 
 ### Content integrity
 
@@ -97,5 +98,6 @@ Release Tag: Not Approved
 | 0.1.0 | 2026-08-07 | Initial Phase C4 repository-wide release-readiness checklist covering the approved Phase C1–C3 governance baseline and supporting change records. | Chief Architect / Product Owner | CHG-003 |
 | 0.1.0 | 2026-08-08 | Added missing direct dependencies and the CHG-004 closure criterion while preserving Draft and unexecuted state. | Chief Architect / Product Owner | CHG-004 |
 | 0.1.0 | 2026-08-08 | Added CHG-004 provenance, CHG-005 dependency, and an unchecked CHG-005 closure criterion. The header Change ID remains CHG-003 as the originating creation record; subsequent changes are identified here. | Chief Architect / Product Owner | CHG-005 |
+| 0.1.0 | 2026-08-08 | Added CHG-006 dependency and unchecked closure criterion for Architecture Manifest approval. | Chief Architect / Product Owner | CHG-006 |
 
 **RRC-001 Status:** **Draft — Pending Validation**
