@@ -8,9 +8,9 @@ Status: Draft (Pending Validation)
 Owner: Chief Architect / Product Owner
 Classification: Informational — Baseline readiness checklist
 Authority Level: Not Applicable — Informational checklist outside the normative authority hierarchy
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, RB-GOV-004-001, AR-GOV-004-001, CHG-001, CHG-002, CHG-003, CHG-004, ARCH-MANIFEST-001, SPEC-001
 Referenced By: None identified
-Last Updated: 2026-08-07
+Last Updated: 2026-08-08
 Change ID: CHG-003
 ```
 
@@ -47,6 +47,7 @@ This document defines readiness criteria. Unchecked boxes do not indicate failur
 - [ ] AR-GOV-004-001 v0.1.0 is present with its validated historical disposition.
 - [ ] CHG-001 and CHG-002 are present with closed Passed records.
 - [ ] CHG-003 is reviewed, approved, implemented, validated, and closed.
+- [ ] CHG-004 is present with a Passed and Closed record.
 
 ### Content integrity
 
