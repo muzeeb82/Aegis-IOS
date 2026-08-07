@@ -17,7 +17,7 @@ Last Updated: 2026-08-08
 
 ```text
 Change ID: CHG-004
-Change Lifecycle State: Implemented — Pending Validation
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -278,15 +278,62 @@ Pre-Implementation Commit: 46220d29cd9e4c5c187344891635b3d6f32fbee8
 - Phase C4 remains open.
 - Validation has not yet been executed or recorded.
 
-## 13. Current Disposition
+## 13. Implementation Disposition
 
 **CHG-004 is Implemented — Pending Validation.**
 
 Implementation is complete within the Approved Scope. No Validation, Closure, RRC-001 execution, Phase C4 completion, or release-tag approval is claimed.
 
-## 14. Revision History
+## 14. Validation Activity
+
+```text
+Validation State: Validated — Pending Closure
+Validator: Chief Architect / Product Owner
+Validation Date: 2026-08-08
+Pre-Implementation Commit: 46220d29cd9e4c5c187344891635b3d6f32fbee8
+Validated Commit: 9cffcd2f2e7eca90492a8514edf66fedba2b80be
+Validation Result: Passed
+Independent Validation: Not required for this Minor change under GOV-002 §8.8
+```
+
+### 14.1 Executed Results
+
+- Zero-context diffs confirmed CHG-001 changed only `Last Updated` and `Change Lifecycle State`. Passed.
+- Zero-context diffs confirmed CHG-002 changed only `Last Updated` and `Change Lifecycle State`. Passed.
+- RRC-001 contains ARCH-MANIFEST-001, SPEC-001, and CHG-004 in `Depends On`. Passed.
+- The RRC-001 CHG-004 criterion is present and unchecked. Passed.
+- RRC-001 remains v0.1.0, Draft, and unexecuted. Passed.
+- CHG-004 contains the complete validated Evidence Reviewed, Review Findings, Scope Review, Review Decision, Approval Basis, Authorized Scope, Approval Conditions, and Approval Decision sections. Passed.
+- Exactly four authorized files differ from the pre-implementation commit. Passed.
+- No tag name or target was approved and no tag exists. Passed.
+- `git diff --check` and `git fsck --no-dangling` passed.
+- Local `master` matched `origin/master` and the working tree was clean. Passed.
+
+### 14.2 Validation Result
+
+**Result: Passed. CHG-004 is Validated — Pending Closure.**
+
+Validation did not execute RRC-001, approve ARCH-MANIFEST-001, activate SPEC-001, approve or create a release tag, or close Phase C4.
+
+## 15. Closure Activity
+
+```text
+Closure State: Closed
+Closed By: Chief Architect / Product Owner
+Closure Date: 2026-08-08
+Closure Result: Passed and Closed
+```
+
+CHG-004 is Closed because its authorized corrections and record-fidelity restoration were implemented and validated with no unrelated drift.
+
+RRC-001's unchecked CHG-003 criterion correctly requires CHG-003's final reviewed, approved, implemented, validated, and closed state. CHG-003's committed record reports `Change Lifecycle State: Closed`, `Validation Result: Passed`, and `Closure Result: Passed and Closed`.
+
+Closure does not execute RRC-001, approve ARCH-MANIFEST-001, activate SPEC-001, approve or create a release tag, or close Phase C4.
+
+## 16. Revision History
 
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 1.0.0 | 2026-08-08 | Initial Minor change record through Approved and Implemented, correcting Phase C4 readiness metadata and checklist coverage. | Chief Architect / Product Owner | CHG-004 |
 | 1.0.0 | 2026-08-08 | Restored complete validated Review and Approval evidence and added a self-fidelity validation check before closure. | Chief Architect / Product Owner | CHG-004 |
+| 1.0.0 | 2026-08-08 | Recorded re-validation against the restored record, Passed result, CHG-003 currency confirmation, and closure. | Chief Architect / Product Owner | CHG-004 |
