@@ -8,8 +8,8 @@
 **Classification:** Informational
 **Authority Level:** Not Applicable — Informational repository map outside the normative authority hierarchy
 **Depends On:** CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, ADR-002, ADR-003, CHARTER-001, PRD-001
-**Referenced By:** README.md, repository.yaml
-**Last Updated:** 2026-08-07
+**Referenced By:** None identified
+**Last Updated:** 2026-08-08
 **Change ID:** CHG-003
 
 ## 1. Purpose
@@ -146,3 +146,4 @@ Repository growth shall preserve canonical ownership, stable identity, explicit 
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-07 | Reserved placeholder with the approved ten-section outline. | Chief Architect / Product Owner | Not applicable — predates GOV-002 change records |
 | 1.0.0 | 2026-08-07 | Proposed Phase C4 repository manifest establishing the repository map, reading order, responsibility boundaries, lifecycle, and expansion rules. | Chief Architect / Product Owner | CHG-003 |
+| 1.0.0 | 2026-08-08 | Corrected `Referenced By` to represent governed-artifact consumers truthfully; README.md and repository.yaml remain supporting links rather than governed-artifact consumers. | Chief Architect / Product Owner | CHG-005 |
