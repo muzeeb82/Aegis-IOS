@@ -7,7 +7,7 @@ Version: 0.1.0
 Status: Draft (Pending Internal Review)
 Owner: Chief Architect
 Classification: Normative
-Authority Level: Level 6
+Authority Level: Level 7
 Depends On: GOV-002, GOV-003, GOV-004, ADR-004, SPEC-001, SPEC-008
 Referenced By: IMP-001 (proposed)
 Last Updated: 2026-08-08
@@ -49,3 +49,4 @@ Unapproved design and implementation work remains on a Draft/feature branch. `ma
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial engineering and repository standard Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Corrected `Authority Level` from Level 6 to Level 7 to match GOV-001 §3's Standards assignment. No substantive rule changed. | Chief Architect / Product Owner | CHG-014 |

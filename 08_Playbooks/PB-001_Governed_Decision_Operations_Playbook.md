@@ -7,7 +7,7 @@ Version: 0.1.0
 Status: Draft (Pending Internal Review)
 Owner: Product Owner / Operations Owner
 Classification: Normative
-Authority Level: Level 6
+Authority Level: Level 8
 Depends On: FRM-001, SPEC-001, SPEC-007
 Referenced By: EX-001, TRN-001 (proposed)
 Last Updated: 2026-08-08
@@ -46,3 +46,4 @@ Decision revision, review/approval, framework execution, evidence graph, authori
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial governed decision-operations playbook Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Corrected `Authority Level` from Level 6 to Level 8 to match GOV-001 §3's Playbooks assignment. No substantive rule changed. | Chief Architect / Product Owner | CHG-014 |
