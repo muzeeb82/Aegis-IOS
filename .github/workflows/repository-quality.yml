@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: pnpm/action-setup@v4
         with:
           version: 11
@@ -23,5 +29,5 @@ jobs:
         run: sh scripts/validate_repository.sh
       - name: Validate I0 foundation
         run: pnpm check
-      - name: Audit production dependencies
-        run: pnpm audit --prod
+      - name: Audit locked dependencies
+        run: pnpm audit

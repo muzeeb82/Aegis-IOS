@@ -15,16 +15,15 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "contract:check": "NO_UPDATE_NOTIFIER=1 redocly lint openapi/openapi.yaml",
-    "secret:check": "sh scripts/check-secrets.sh",
-    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm contract:check && pnpm secret:check"
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm contract:check"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@redocly/cli": "^2.46.0",
-    "eslint": "^10.8.0",
-    "prettier": "^3.9.6",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.66.0",
-    "vitest": "^4.1.10"
+    "@eslint/js": "10.0.1",
+    "@redocly/cli": "2.46.0",
+    "eslint": "10.8.0",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.66.0",
+    "vitest": "4.1.10"
   }
 }
