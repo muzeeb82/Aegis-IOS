@@ -3,15 +3,15 @@
 ```text
 Document ID: CHG-047
 Title: Authorize Increment I3 Portfolio Snapshots and Framework Execution
-Version: 0.1.1
-Status: Draft — Pending Review
+Version: 1.0.0
+Status: Approved — Pending Implementation
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, ADR-006, SPEC-001, SPEC-002, SPEC-004, SPEC-008, STD-001, FRM-001, IMP-001, CHG-044, CHG-045
 Referenced By: None identified
 Last Updated: 2026-08-09
-Change Lifecycle State: Draft
+Change Lifecycle State: Approved — Pending Implementation
 ```
 
 ## 1. Change Record
@@ -59,11 +59,17 @@ I3 does not authorize live portfolio management, live investment research, marke
 
 ## 6. Review Activity
 
-Review Result: Pending.
+Review Result: Passed.
+
+Review confirmed that §2 consumes exactly the Portfolio and Framework aggregates owned by SPEC-002, that AC-005 and AC-006 align with SPEC-001, and that FRM-001 §1.2 and §5 requirements for Approved versions and override authority/expiry are represented. The explicit boundaries exclude live investment behavior and deferred I4–I8 capabilities.
 
 ## 7. Approval Activity
 
-Approval Result: Pending. No I3 implementation is authorized by this Draft.
+Approval Result: Approved.
+
+Decision Authority: Chief Architect / Product Owner. Approval Date: 2026-08-09. Approval Evidence: the Decision Authority explicitly stated `I approve CHG-047.`
+
+Authorized scope is exactly §2, subject to §3 boundaries and §5 evidence. Validation must be executed and recorded before this record can close.
 
 ## 8. Revision History
 
@@ -71,3 +77,4 @@ Approval Result: Pending. No I3 implementation is authorized by this Draft.
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial bounded I3 authorization Draft derived from IMP-001, the approved specifications, FRM-001, and the closed I1/I2 foundations. | Chief Architect / Engineering Owner | CHG-047 |
 | 0.1.1 | 2026-08-09 | Added FRM-001 §5 override-expiry conformance to the authorized scope, impact analysis, and required validation evidence. | Chief Architect / Engineering Owner | CHG-047 |
+| 1.0.0 | 2026-08-09 | Review passed; approved the bounded I3 scope for implementation subject to its explicit boundaries and evidence requirements. | Chief Architect / Product Owner | CHG-047 |
