@@ -9,6 +9,8 @@
 **Authority Level:** Level 1
 **Governed By:** CONST-001
 **Depends On:** CONST-001, ADR-002, ADR-003
+**Referenced By:** ADR-004, ADR-005, ARCH-MANIFEST-001, AR-GOV-004-001, AR-SYS-001, CHARTER-001, CHG-010, GOV-002, GOV-003, GOV-004, PI-001, PRD-001, RB-GOV-004-001, RRC-001, SPEC-001, TRN-001
+**Last Updated:** 2026-08-08
 **Date:** 2026-08-07
 
 ## 1. Purpose
@@ -143,3 +145,4 @@ Normative artifacts prevail over Informational and Runtime artifacts. Runtime ar
 | Version | Date | Status | Change |
 |---|---|---|---|
 | 1.0.0 | 2026-08-07 | Approved | Initial approved governance baseline. |
+| 1.0.0 | 2026-08-08 | Approved | Added verified direct-consumer traceability metadata under CHG-010; no governance rule or authority change. |

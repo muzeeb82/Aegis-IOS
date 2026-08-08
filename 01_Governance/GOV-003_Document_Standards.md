@@ -11,8 +11,8 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 1
 Depends On: CONST-001, GOV-001, GOV-002, ADR-002, ADR-003
-Referenced By: None identified
-Last Updated: 2026-08-07
+Referenced By: ADR-004, ADR-005, ARCH-MANIFEST-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, GOV-004, RB-GOV-004-001, RFC-001, RRC-001, SPEC-001, STD-001
+Last Updated: 2026-08-08
 Change ID: CHG-002
 ```
 
@@ -1446,6 +1446,7 @@ Before GOV-003 is approved or revised, verify that:
 |---|---|---|---|---|
 | 1.0.0 | 2026-08-07 | Initial approved GOV-003 — Document Standards. | Chief Architect / Product Owner | Not applicable — initial approval preceded CHG-002 |
 | 1.1.0 | 2026-08-07 | Adds governed artifact-family-specific status profiles while preserving the common maturity vocabulary and GOV-002 ownership of Change Record lifecycle states. | Chief Architect / Product Owner | CHG-002 |
+| 1.1.0 | 2026-08-08 | Added verified direct-consumer traceability metadata under CHG-010; no document-standard rule or authority change. | Chief Architect / Product Owner | CHG-010 |
 
 ---
 
