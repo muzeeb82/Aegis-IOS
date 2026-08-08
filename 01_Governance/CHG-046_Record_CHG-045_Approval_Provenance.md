@@ -33,11 +33,11 @@ CHG-045 was created as a Draft and its passed review plus Approval Activity were
 
 ## 3. Evidence Basis
 
-The controlling project conversation contains the following sequence:
+The approval evidence is preserved across two project-conversation sessions:
 
-1. The Engineering Owner stated that only formal CHG-045 approval remained and that I2 implementation would begin after the Decision Authority said to proceed.
-2. The Decision Authority responded: `please processed`.
-3. When asked directly whether the approval was theirs, the Decision Authority confirmed: `Yes — CHG-045's approval is yours.`
+1. **ChatGPT project session:** The Engineering Owner stated that only formal CHG-045 approval remained and that I2 implementation would begin after the Decision Authority said to proceed.
+2. **ChatGPT project session:** The Decision Authority responded: `please processed`.
+3. **Codex project session:** When asked directly whether the approval was theirs, the Decision Authority confirmed: `Yes — CHG-045's approval is yours.`
 
 This record treats those instructions as the actual approval act. It does not manufacture an earlier approval date, substitute a new approval, or assert that the Engineering Owner independently approved its own Draft.
 
@@ -48,7 +48,7 @@ Subject to Minor review and approval, amend only CHG-045 as follows:
 1. Add `CHG-046` to CHG-045's `Referenced By` field.
 2. Append `## 9. Approval Provenance Correction` without changing CHG-045 §§1–8:
 
-   > This section is added under CHG-046 to preserve approval provenance. CHG-045's Approval Activity (§7) records the approved scope but did not identify the Decision Authority's actual approval instruction. The Chief Architect / Product Owner explicitly authorized I2 to proceed in the controlling project conversation after being told that formal CHG-045 approval was the sole remaining prerequisite, and later directly confirmed that the approval was theirs. This correction records that evidence; it does not create, backdate, or replace the original approval.
+   > This section is added under CHG-046 to preserve approval provenance. CHG-045's Approval Activity (§7) records the approved scope but did not identify the Decision Authority's actual approval instruction. In the ChatGPT project session, the Chief Architect / Product Owner explicitly authorized I2 to proceed after being told that formal CHG-045 approval was the sole remaining prerequisite; in the Codex project session, the Chief Architect / Product Owner later directly confirmed that the approval was theirs. This correction records that evidence; it does not create, backdate, or replace the original approval.
 
 3. Append `## 10. Revision History` with one row recording this provenance correction under CHG-046. No status, scope, approval result, implementation text, or validation claim in CHG-045 is altered.
 
@@ -82,3 +82,4 @@ Approval Result: Pending. No correction is authorized by this Draft.
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Draft to record the Decision Authority's actual CHG-045 approval provenance without rewriting the original Approval Activity. | Chief Architect / Product Owner | CHG-046 |
+| 0.1.1 | 2026-08-09 | Clarified the ChatGPT and Codex project-session sources for each approval-evidence item and proposed provenance text. | Chief Architect / Product Owner | CHG-046 |
