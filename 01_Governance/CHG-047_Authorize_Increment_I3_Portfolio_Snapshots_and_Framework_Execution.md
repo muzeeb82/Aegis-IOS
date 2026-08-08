@@ -3,7 +3,7 @@
 ```text
 Document ID: CHG-047
 Title: Authorize Increment I3 Portfolio Snapshots and Framework Execution
-Version: 0.1.0
+Version: 0.1.1
 Status: Draft — Pending Review
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
@@ -29,7 +29,7 @@ Urgency: Normal
 
 ## 2. Proposed Authorized Scope
 
-I3 may implement only the canonical Portfolio, Account, InstrumentMapping, Holding, PortfolioSnapshot, Constraint, FrameworkDefinition, FrameworkVersion, and FrameworkExecution records; immutable synthetic portfolio-snapshot reconstruction; and application of an Approved framework version to synthetic input-record versions. Framework execution may record ordered step results, rule evaluations, outputs, exceptions, overrides, and the authority for each override. The increment may add the migrations, I1-protected mutation operations, typed traceability, tests, and evidence necessary to demonstrate AC-005 and AC-006.
+I3 may implement only the canonical Portfolio, Account, InstrumentMapping, Holding, PortfolioSnapshot, Constraint, FrameworkDefinition, FrameworkVersion, and FrameworkExecution records; immutable synthetic portfolio-snapshot reconstruction; and application of an Approved framework version to synthetic input-record versions. Framework execution may record ordered step results, rule evaluations, outputs, exceptions, overrides, and the authority and expiry for each override. The increment may add the migrations, I1-protected mutation operations, typed traceability, tests, and evidence necessary to demonstrate AC-005 and AC-006.
 
 ## 3. Explicit Boundaries
 
@@ -41,7 +41,7 @@ I3 does not authorize live portfolio management, live investment research, marke
 |---|---|
 | Portfolio ownership | Material. I3 consumes SPEC-002's Portfolio-domain ownership without creating a competing decision or evidence record model. |
 | Snapshot integrity | Material. Decisions and framework executions must resolve the exact, immutable synthetic portfolio snapshot and constituent record versions used. |
-| Framework governance | Material. Execution must identify an exact Approved framework version; Draft or retired versions cannot be applied where approval is required. |
+| Framework governance | Material. Execution must identify an exact Approved framework version; Draft or retired versions cannot be applied where approval is required; an override must retain its authority and expiry. |
 | Security and authority | Material. I1 authorization and audit foundations must protect portfolio, constraint, framework, and execution mutations. System permission remains distinct from business approval or override authority. |
 | Validation | Material. AC-005 and AC-006 require reconstruction, positive, negative, authorization, lifecycle, traceability, migration, recovery, and reconciliation cases. |
 | Deferred scope | Live data, live actions, AI, connectors, outcomes, learning, production deployment, and release remain separately authorized future work. |
@@ -50,6 +50,7 @@ I3 does not authorize live portfolio management, live investment research, marke
 
 - Executed AC-005 evidence proving a synthetic portfolio snapshot reconstructs holdings, allocations, constraints, rules, and the exact decision/snapshot revision reference.
 - Executed AC-006 evidence proving an execution applies an exact Approved framework version and identifies that version from its result; Draft and retired versions must be rejected where approval is required.
+- Tests proving every recorded framework exception or override retains both its authority and expiry, as required by FRM-001 §5.
 - Tests proving invalid or unauthorized portfolio, snapshot, framework-version, and framework-execution mutations are rejected; immutable snapshot and execution history cannot be overwritten.
 - Synthetic-data migration, rollback/recovery, and reconciliation evidence for every I3 aggregate and its current revision/snapshot relationship.
 - Typed traversal from decision through snapshot, framework version, execution, rules, and evidence as applicable.
@@ -69,3 +70,4 @@ Approval Result: Pending. No I3 implementation is authorized by this Draft.
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial bounded I3 authorization Draft derived from IMP-001, the approved specifications, FRM-001, and the closed I1/I2 foundations. | Chief Architect / Engineering Owner | CHG-047 |
+| 0.1.1 | 2026-08-09 | Added FRM-001 §5 override-expiry conformance to the authorized scope, impact analysis, and required validation evidence. | Chief Architect / Engineering Owner | CHG-047 |
