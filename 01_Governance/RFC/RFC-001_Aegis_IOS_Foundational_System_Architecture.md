@@ -4,7 +4,7 @@
 Document ID: RFC-001
 Title: Aegis IOS Foundational System Architecture
 Version: 0.1.0
-Status: Revision Required
+Status: Approved for Decision
 Owner: Chief Architect / Product Owner
 Classification: Informational — Architecture proposal
 Authority Level: Not Applicable — RFC outside normative authority hierarchy
@@ -30,7 +30,7 @@ The proposal establishes logical architecture, not vendors, protocols, service o
 
 ## 4. Current State
 
-The repository has an approved governance and product baseline but no Approved foundational architecture. AR-SYS-001 supplies the architecture-review input and is currently `Revision Required` under GOV-004 §14. ADR-004 is a related Draft decision record, not an approved architecture. No production implementation, vendor selection, or operational migration is authorized.
+The repository has an approved governance and product baseline but no Approved foundational architecture. AR-SYS-001 supplies the architecture-review input and is `Review Confirmed` under GOV-004 §14. ADR-004 is a related Draft decision record, not an approved architecture. No production implementation, vendor selection, or operational migration is authorized.
 
 ## 5. Proposed Architecture
 
@@ -84,24 +84,24 @@ No production migration is proposed. The initial deployment remains cohesive; ex
 ## 13. Consultation Record
 
 ```text
-Consultation State: Completed for scope clarification; not sufficient for decision readiness
+Consultation State: Completed — decision readiness confirmed under CHG-027
 Consultation Window: 2026-08-08
 Proposal Owner and Author: Chief Architect / Product Owner
 Affected Owner: Chief Architect / Product Owner
 Reviewer Designation: No independent reviewer is currently designated
-Compensating Control: A separately recorded, criteria-driven architecture validation review under CHG-021, checked after drafting against GOV-004 §§19, 21, 24, 25, and 29; a separate independent reviewer remains required where practical before any ADR approval.
+Compensating Control: Separately recorded criteria-driven reviews under CHG-021 and CHG-027, checked after correction against GOV-004 §§19–22 and the applicable Architecture Review criteria; a separate independent reviewer remains preferred where practical before ADR approval.
 ```
 
 | Topic | Comment and evidence | Author response / disposition |
 |---|---|---|
 | Domain-responsibility overlap | AR-SYS-001 §8.3 maps several requirements to more than one domain, while this RFC previously asked whether responsibilities were non-overlapping. | **Resolved for this proposal:** multi-domain requirement coverage expresses collaboration and traceability, not duplicate canonical ownership. Each domain retains the distinct responsibility named in AR-SYS-001 §8.3; cross-domain operations must use explicit contracts. Detailed data/API ownership remains for the specifications and is not decided here. |
 | Architecture/PRD boundary | ADR-003 prohibits Architecture artifacts from defining product capability requirements. | Confirmed. This RFC consumes PRD-001 but does not add, amend, or approve product requirements. |
-| AR-SYS-001 readiness | AR-SYS-001 is `Revision Required` because required review content and impact treatment remain incomplete. | **Unresolved blocking concern.** This RFC cannot be `Approved for Decision` until the applicable Architecture Review outcome and its required corrections are completed. |
-| Role separation | Proposal owner, affected owner, and decision authority are presently the same role. | **Unresolved readiness limitation.** The limitation and compensating review are recorded; a distinct reviewer should be designated where practical before ADR approval. |
+| AR-SYS-001 readiness | AR-SYS-001 is `Review Confirmed` under CHG-027. | **Resolved.** The Architecture Review now supplies confirmed decision-readiness evidence; ADR approval remains a separate action. |
+| Role separation | Proposal owner, affected owner, and decision authority are presently the same role. | No independent reviewer is currently designated. A separate post-correction criteria review under CHG-027 is the compensating control; a distinct reviewer remains preferred where practical before ADR approval. |
 
 ## 14. Review Comments and Dissent
 
-No external reviewer comments or dissent have been received because no independent reviewer is currently designated. This absence is not approval. The unresolved AR-SYS-001 readiness finding and the lack of a designated independent reviewer are recorded as material decision-readiness limitations rather than being treated as silent consensus.
+No external reviewer comments or dissent have been received because no independent reviewer is currently designated. This absence is not approval. The Architecture Review confirmation and the recorded compensating review resolve RFC decision readiness; the continuing absence of a designated independent reviewer remains a disclosed limitation for the Decision Authority rather than silent consensus.
 
 ## 15. Resulting ADRs
 
@@ -109,14 +109,14 @@ ADR-004 is the related Draft ADR that may record an architecture decision only a
 
 ## 16. Disposition
 
-**Revision Required.** Consultation has resolved the scope interpretation for domain-responsibility overlap, but AR-SYS-001 remains `Revision Required` and no independent reviewer is designated. No approval, implementation, or validation is claimed.
+**Approved for Decision.** Consultation has resolved the domain-responsibility interpretation and AR-SYS-001 is Review Confirmed. This RFC is sufficiently developed to proceed to ADR-004 decision; it does not approve architecture, implementation, or validation.
 
 ## 17. Validation Checklist
 
 - [x] Affected-owner consultation and recorded responses are present; absence of an independent reviewer is explicitly recorded as a limitation.
 - [x] Alternatives and impact categories are recorded.
 - [x] The domain-responsibility overlap interpretation is resolved for this proposal; remaining readiness limitations are recorded.
-- [ ] AR-SYS-001 `Revision Required` findings are resolved and final decision scope is suitable for ADR-004.
+- [x] AR-SYS-001 review findings are resolved and final decision scope is suitable for ADR-004.
 - [x] No vendor choice or implementation is implied.
 
 ## 18. Revision History
@@ -125,3 +125,4 @@ ADR-004 is the related Draft ADR that may record an architecture decision only a
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial foundational-architecture RFC Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Under CHG-021: added ADR-003 as a direct dependency; completed required RFC decision-readiness content and consultation record; recorded the domain-responsibility disposition and readiness limitations. Status transitioned `Draft → In Review → Revision Required`; no approval or implementation authorization recorded. | Chief Architect / Product Owner | CHG-021 |
+| 0.2.0 | 2026-08-08 | Under CHG-027: re-executed RFC consultation/readiness review after AR-SYS-001 reached Review Confirmed; transitioned `Revision Required → In Review → Approved for Decision`. Architecture approval remains exclusively for ADR-004. | Chief Architect / Product Owner | CHG-027 |

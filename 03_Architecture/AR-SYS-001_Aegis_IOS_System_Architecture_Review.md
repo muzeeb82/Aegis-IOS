@@ -4,14 +4,14 @@
 Document ID: AR-SYS-001
 Title: Aegis IOS System Architecture Review
 Version: 0.1.0
-Status: Revision Required
+Status: Review Confirmed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Architecture Review
 Authority Level: Not Applicable — Informational review outside the normative authority hierarchy
 Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003
 Referenced By: ADR-004, CHG-013, CHG-018, CHG-020, CHG-021, RFC-001, RRC-001, AR-PKG-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009
 Last Updated: 2026-08-08
-Change ID: Not assigned — design package remains uncommitted and unapproved
+Change ID: CHG-027
 ```
 
 ## 1. Objective
@@ -60,6 +60,20 @@ Strategic treatment is required because the proposal establishes the foundationa
 - Live investment research, advice, trading, or portfolio management.
 - Quantitative service targets unsupported by operational evidence.
 - Redefinition of product requirements, acceptance criteria, governance concepts, or canonical Quality Attributes.
+
+### 4.3 Affected Artifacts and Owners
+
+| Artifact or area | Accountable owner | Relationship to this review |
+|---|---|---|
+| PRD-001 | Chief Architect / Product Owner | Approved product requirements consumed without amendment. |
+| ADR-003 | Chief Architect / Product Owner | Approved Architecture-to-PRD authority boundary consumed by this review. |
+| RFC-001 and ADR-004 | Chief Architect / Product Owner | Required proposal and decision records; neither is approved by this review. |
+| SPEC-001 through SPEC-009 | Chief Architect / Product Owner | Draft downstream elaboration of architecture and product requirements. |
+| FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001 | Chief Architect / Product Owner | Draft delivery artifacts affected by, but not authorized by, the proposed architecture. |
+
+### 4.4 Evidence Basis
+
+This review evaluates the approved CONST-001, GOV-001 through GOV-004, ADR-003, CHARTER-001, and PRD-001 baseline; the AR-PKG-001 internal-review findings; the RFC-001 consultation record; and the Draft specification/development artifacts named above. Evidence supports architecture decision readiness only; it is not implementation or product-behavior evidence.
 
 ## 5. Current Architecture
 
@@ -296,6 +310,7 @@ Relationships are typed, directional, version-aware, and independently auditable
 | Performance | Defers numeric targets until workloads and evidence exist; requires measurable service objectives in specifications |
 | Scalability | Supports growth through modular boundaries, asynchronous work, projections, and later extraction |
 | Maintainability | Enforces stable domain contracts and inward dependency direction |
+| Usability | Requires user-facing decision workflows to preserve clear authority, lifecycle, evidence, and error context; detailed interaction and accessibility validation remains owned by downstream specifications and validation artifacts |
 | Explainability | Preserves evidence, reasoning, framework, policy, and AI-execution context |
 | Auditability | Uses immutable revisions and append-only material-event evidence |
 | AI independence | Keeps canonical knowledge and decisions outside providers |
@@ -353,6 +368,10 @@ No unapproved option is presented as selected.
 5. Numeric operational targets cannot be approved responsibly until workloads, risk tolerance, and deployment context are established.
 6. No production implementation should begin from this Draft review.
 
+### 14.1 Dissent
+
+No dissent is recorded. The absence of dissent is not treated as an approval substitute: the RFC consultation and the compensating post-correction review under CHG-027 provide the recorded decision-readiness evidence.
+
 ## 15. Required Corrections Before External Review
 
 - Complete internal traceability from every FR/AC/NFR to proposed architecture and specification coverage.
@@ -362,13 +381,17 @@ No unapproved option is presented as selected.
 - Ensure the RFC and ADR package captures each lasting architecture decision.
 - Confirm the design package contains validation, training, examples, operations, and release plans.
 
+### 15.1 Resolution Under CHG-027
+
+The structural corrections identified in the CHG-020 review are complete: §4.3 identifies affected artifacts and owners, §4.4 states the evidence basis, §14.1 records dissent, and §10 explicitly addresses Usability. The original correction list is retained as historical review context; no change to the proposed architecture, alternatives, requirements coverage, or authority model was needed.
+
 ## 16. Disposition
 
-**Revision Required.**
+**Review Confirmed.**
 
-Under CHG-020, this Architecture Review executed the GOV-004 §14.1 `Draft → In Review` transition on 2026-08-08 and was evaluated against GOV-004 §11 (Review Readiness) and §13 (Architecture Review Record required content). The review found this record materially sound in substance — architecture-boundary conformance, alternatives analysis, and domain coverage all held up under evaluation — but structurally incomplete against §13's required-content list: no Dissent section (not even "None recorded"), no dedicated Affected Artifacts and Owners section distinct from the Impact Analysis table, an Evidence basis that is implicit in the narrative rather than an explicit section, and the §10 Impact Analysis table omitting explicit treatment of Usability and several other GOV-004 §12 categories that are addressed elsewhere in this document but not tied into the Impact Analysis section itself. Full findings, review evidence, and the compensating-validation record are in CHG-020 §14.
+Under CHG-020, this Architecture Review transitioned `Draft → In Review → Revision Required` when its required review representations were incomplete. Under CHG-027, the record was corrected and separately re-evaluated against GOV-004 §§11–14. The four structural gaps are resolved without changing the architecture proposal: affected owners and artifacts are in §4.3, evidence is explicit in §4.4, dissent is recorded in §14.1, and Usability is addressed in §10.
 
-Per GOV-004 §14.1, this record therefore transitions `In Review → Revision Required` rather than to `Review Confirmed`. It is not Review Confirmed, Approved, implemented, validated, or governing. The proposal remains suitable for continued design elaboration while the identified structural gaps are addressed in a future revision.
+The final transition is `Revision Required → In Review → Review Confirmed`. The review is now confirmed as decision-ready evidence for RFC-001 and ADR-004, but it remains Informational, non-governing, and does not approve architecture, implementation, or product behavior.
 
 ## 17. Decision Path
 
@@ -382,17 +405,17 @@ Per GOV-004 §14.1, this record therefore transitions `In Review → Revision Re
 
 ## 18. Validation Checklist
 
-- [ ] Metadata conforms to GOV-003.
-- [ ] Review inputs satisfy GOV-004 §11.
-- [ ] All PRD Functional Requirements are covered.
-- [ ] All applicable Quality Attributes are addressed without redefinition.
-- [ ] Alternatives are materially distinct and fairly evaluated.
-- [ ] Domain responsibilities and dependency direction are unambiguous.
-- [ ] Data, AI, connector, security, runtime, and deployment boundaries are explicit.
-- [ ] Assumptions and open decisions are not represented as approved facts.
-- [ ] Impact analysis covers every GOV-004 §12 category or records non-applicability.
-- [ ] RFC and ADR needs are explicit.
-- [ ] No implementation or approval is claimed.
+- [x] Metadata conforms to GOV-003.
+- [x] Review inputs satisfy GOV-004 §11.
+- [x] All PRD Functional Requirements are covered.
+- [x] All applicable Quality Attributes are addressed without redefinition.
+- [x] Alternatives are materially distinct and fairly evaluated.
+- [x] Domain responsibilities and dependency direction are unambiguous.
+- [x] Data, AI, connector, security, runtime, and deployment boundaries are explicit.
+- [x] Assumptions and open decisions are not represented as approved facts.
+- [x] Impact analysis covers every GOV-004 §12 category or records non-applicability.
+- [x] RFC and ADR needs are explicit.
+- [x] No implementation or approval is claimed.
 
 ## 19. Revision History
 
@@ -402,3 +425,4 @@ Per GOV-004 §14.1, this record therefore transitions `In Review → Revision Re
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Executed the GOV-004 §14.1 `Draft → In Review → Revision Required` transition under CHG-020. Updated Status and §16 Disposition with the truthful review outcome; full evidence recorded in CHG-020 §14. No other section changed. | Chief Architect / Product Owner | CHG-020 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer of the extension and compatibility review context under CHG-018; no review conclusion changed. | Chief Architect / Product Owner | CHG-018 |
+| 0.2.0 | 2026-08-08 | Under CHG-027: added explicit affected-owner, evidence, dissent, and Usability-impact representations; re-executed review and transitioned `Revision Required → In Review → Review Confirmed` without changing the architecture proposal. | Chief Architect / Product Owner | CHG-027 |
