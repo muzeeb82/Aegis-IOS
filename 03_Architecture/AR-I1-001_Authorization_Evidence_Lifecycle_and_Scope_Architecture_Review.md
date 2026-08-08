@@ -3,7 +3,7 @@
 ```text
 Document ID: AR-I1-001
 Title: Authorization-Evidence Lifecycle and Scope Architecture Review
-Version: 0.2.0
+Version: 0.2.1
 Status: Draft
 Owner: Architecture Review Lead
 Classification: Informational
@@ -55,7 +55,7 @@ Findings: Pending. Dissent: None recorded; consultation must provide a dissent c
 
 ## 7. Consultation Plan
 
-Consultation is not open. Before RFC-002 may enter `In Review`, this record must identify named reviewers, affected owners, evidence inputs, a response method, an opening date, a closing date, and non-response treatment. Default non-response is recorded as no response, not consent or approval.
+Consultation is not open. Before the confirmed opening time, this record must identify named reviewers, affected owners, immutable evidence inputs, a response method, an opening date, a closing date, and non-response treatment. At that opening time, AR-I1-001 and RFC-002 transition to `In Review` and consultation begins. Default non-response is recorded as no response, not consent or approval.
 
 ### 7.1 Draft Consultation Setup — Not Open
 
@@ -77,7 +77,8 @@ This setup prepares consultation only. It does not open consultation, establish 
 | I3 authorized boundary | CHG-047 v1.0.0, commit `01890a75489ab7b1d0ccbc09b39fb1ba6467b2a2` | I3 portfolio/framework owner | Identify requested-scope provenance and governance-blocked AC-005/006 cases. |
 | Change assessment | CHG-048 v0.2.2, commit `fd6f231c9d4ae914e1c9a6932029200d836a233a` | Architecture Review Lead | Establish impacts, risks, and the assessment-only boundary. |
 | RFC proposal | RFC-002 v0.2.2, commit `fd6f231c9d4ae914e1c9a6932029200d836a233a` | Architecture Review Lead | Evaluate alternatives without selecting one prematurely. |
-| Normative data and security constraints | SPEC-002 v1.0.0 and SPEC-004 v1.0.0 at the current `master` baseline | SPEC-002 and SPEC-004 owners | Assess data-contract, security, migration, recovery, and validation effects. |
+| Normative data constraints | SPEC-002 v1.0.0, commit `1f3f865ef8b79586aff2174523a7ac95a2e1b2f6` | SPEC-002 owner | Assess data-contract, migration, recovery, and validation effects. |
+| Normative security constraints | SPEC-004 v1.0.0, commit `de3e41612127cd8212a0889a4fc559bf16a5e0c6` | SPEC-004 owner | Assess security, availability, recovery, and validation effects. |
 
 **Review questions and evaluation**
 
@@ -92,7 +93,7 @@ Responses must address the architecture question in §1 and evaluate each RFC-00
 
 **Required output and disposition owner**
 
-The Architecture Review Lead owns the consultation summary, findings, dissent disposition, evidence index, and recommendation. A completed consultation may result only in additional evidence required, revision required, continued Draft, or a recommendation that RFC-002 may enter `In Review`; it cannot itself approve RFC-002, create an ADR, or authorize implementation.
+The Architecture Review Lead owns the consultation summary, findings, dissent disposition, evidence index, and recommendation. After consultation begins in `In Review`, its documented outcome may be additional evidence required, `Revision Required`, `Deferred`, `Rejected`, continued review, or—only when all decision-readiness requirements pass—`Approved for Decision`. Consultation cannot itself create an ADR or authorize implementation.
 
 ## 8. Decision Readiness and Disposition
 
@@ -115,3 +116,4 @@ Readiness requires completed evidence review, alternatives analysis, affected-ow
 | 0.1.0 | 2026-08-09 | Initial Draft Full Architecture Review record for CHG-048 and RFC-002. | Architecture Review Lead |
 | 0.1.1 | 2026-08-09 | Clarified the Product Owner as a candidate Decision Authority pending an explicit recorded authority basis. | Architecture Review Lead |
 | 0.2.0 | 2026-08-09 | Added Draft-only consultation setup: named role holders, overlap limitation and compensating review, evidence inputs, proposed dates, PR #10 channel, response handling, and disposition controls. Consultation remains unopened. | Architecture Review Lead |
+| 0.2.1 | 2026-08-09 | Corrected consultation lifecycle ordering and replaced mutable SPEC references with immutable versioned commit references. Dates remain proposed pending verified availability and evidence access. | Architecture Review Lead |
