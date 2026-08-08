@@ -8,7 +8,7 @@ Status: Draft (Pending Validation)
 Owner: Chief Architect / Product Owner
 Classification: Informational — Baseline readiness checklist
 Authority Level: Not Applicable — Informational checklist outside the normative authority hierarchy
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, ADR-004, ADR-005, RB-GOV-004-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, RFC-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, CHG-013, CHG-014, CHG-015, CHG-016, CHG-017, CHG-018, CHG-019, CHG-020, CHG-021, CHG-022, CHG-023, CHG-024, CHG-025, ARCH-MANIFEST-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, ADR-004, ADR-005, RB-GOV-004-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, RFC-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, CHG-013, CHG-014, CHG-015, CHG-016, CHG-017, CHG-018, CHG-019, CHG-020, CHG-021, CHG-022, CHG-023, CHG-024, CHG-025, CHG-026, ARCH-MANIFEST-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
 Referenced By: None identified
 Last Updated: 2026-08-08
 Change ID: CHG-003
@@ -64,12 +64,12 @@ This document defines readiness criteria. Unchecked boxes do not indicate failur
 
 ### Design-package artifacts
 
-- [ ] ADR-004, RFC-001, AR-PKG-001, AR-SYS-001, SPEC-001 through SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, and IMP-001 each exist only as Draft (or Reserved) and none is represented as Approved or governing.
+- [ ] AR-PKG-001 remains an Informational `Review Confirmed` record subject to its §12 corrective findings and is not represented as an architecture or product approval. ADR-004, RFC-001, AR-SYS-001, SPEC-001 through SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, and IMP-001 remain in an allowed pre-approval state (Draft, In Review, Revision Required, or Reserved) and none is represented as Approved or governing.
 - [ ] CHG-008 is present with a Passed and Closed record.
 - [ ] CHG-009 and CHG-010 are present with Passed and Closed records.
 - [ ] CHG-011 is present with a Passed and Closed record.
 - [ ] CHG-012 is present with a Passed and Closed record.
-- [ ] CHG-013 through CHG-024 are present with Closed records.
+- [ ] CHG-013 through CHG-026 are present with Closed records.
 
 ### Governance integrity
 
@@ -112,6 +112,7 @@ Release Tag: Not Approved
 | 0.1.0 | 2026-08-08 | CHG-007 is now Approved, Implemented, Validated, and Closed (see CHG-007 §16). The §2 "CHG-007 is present with a Passed and Closed record" criterion is satisfied by that record but remains unchecked here — RRC-001 itself remains v0.1.0, Draft, and Not Executed; no criterion is marked Passed except through actual §4 execution. | Chief Architect / Product Owner | CHG-007 |
 | 0.1.0 | 2026-08-08 | Under CHG-012: replaced the "SPEC-001 remains Reserved" criterion with a new "Design-package artifacts" subsection requiring ADR-004, RFC-001, AR-PKG-001, AR-SYS-001, SPEC-001–SPEC-008, FRM-001, STD-001, PB-001, EX-001, TRN-001, and IMP-001 to remain Draft/Reserved and not be represented as Approved, plus closure criteria for CHG-008 through CHG-012. Added those same artifacts (and ADR-005) to `Depends On`. RRC-001 remains v0.1.0, Draft, and Not Executed; no criterion is marked Passed by this edit. | Chief Architect / Product Owner | CHG-012 |
 | 0.1.0 | 2026-08-08 | Under CHG-025: added CHG-013 through CHG-025 and SPEC-009 to `Depends On`, extended the Draft design-package criterion through SPEC-009, and added the closed-record criterion for CHG-013 through CHG-024. RRC-001 remains Draft and Not Executed; no criterion is marked Passed by this edit. | Chief Architect / Product Owner | CHG-025 |
+| 0.1.0 | 2026-08-08 | Under CHG-026: corrected the design-package lifecycle criterion to distinguish AR-PKG-001's Informational review state and the allowed pre-approval states of other Design artifacts; extended dependency and closure representation through CHG-026. RRC-001 remains Draft and Not Executed; no criterion is marked Passed by this edit. | Chief Architect / Product Owner | CHG-026 |
 
 **RRC-001 Status:** **Draft — Pending Validation**
 
