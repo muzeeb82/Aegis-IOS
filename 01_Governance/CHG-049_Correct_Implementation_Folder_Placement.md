@@ -3,7 +3,7 @@
 ```text
 Document ID: CHG-049
 Title: Correct Manifest-Owned Implementation Folder Placement
-Version: 0.2.1
+Version: 0.3.0
 Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
@@ -29,17 +29,17 @@ Urgency: Normal
 
 ## 2. Proposed Authorized Scope
 
-ARCH-MANIFEST-001 §3 assigns `12_Implementation/` responsibility for source, connectors, scripts, infrastructure, and tests. Its current internal structure already reserves the canonical directories `Source/`, `Connectors/`, `Scripts/`, `Infrastructure/`, and `Tests/`.
+ARCH-MANIFEST-001 §3 assigns `12_Implementation/` responsibility for source, connectors, scripts, infrastructure, and tests. The repository currently contains existing uppercase directories `Source/`, `Connectors/`, `Scripts/`, `Infrastructure/`, and `Tests/` beneath that area. Their canonical status is a review question; this Draft treats them only as proposed destinations supported by repository precedent.
 
 Subject to approval, this record authorizes only the following Manifest-owned relocations and the path-reference updates required to preserve identical behavior:
 
-| Current path | Existing canonical destination | Basis |
+| Current path | Existing proposed destination | Basis |
 |---|---|---|
 | `src/` | `12_Implementation/Source/` | ARCH-MANIFEST-001 §3: Source |
 | `scripts/` | `12_Implementation/Scripts/` | ARCH-MANIFEST-001 §3: Scripts |
 | `tests/` | `12_Implementation/Tests/` | ARCH-MANIFEST-001 §3: Tests |
 
-No new lowercase parallel directory is authorized. `12_Implementation/Connectors/` and `12_Implementation/Infrastructure/` remain reserved and unchanged because no current root-level connector or infrastructure directory is in scope.
+No new lowercase parallel directory is proposed because it would risk duplicate responsibility. `12_Implementation/Connectors/` and `12_Implementation/Infrastructure/` remain unchanged because no current root-level connector or infrastructure directory is in scope.
 
 Root-level repository entry-point and tool-configuration files remain at root: `package.json`, `pnpm-lock.yaml`, `tsconfig.json`, `eslint.config.mjs`, `.prettierrc.json`, `.prettierignore`, `docker-compose.yml`, `redocly.yaml`, `.env.example`, `.gitignore`, `.dockerignore`, `README.md`, `LICENSE`, `repository.yaml`, and `Architecture_Manifest.md`.
 
@@ -60,7 +60,7 @@ This record neither decides those classifications nor treats a future relocation
 
 **GOV-002 classification:** Major, because repository paths, build tooling, validation, automation, and active developer workflows are materially affected.
 
-**GOV-004 architecture significance:** Focused Architecture Review required before CHG-049 approval. The effect is contained to three Manifest-owned areas under one owner; no system interface, data contract, security model, runtime behavior, or new architectural mechanism changes; and the move is reversible. CI and developer tooling are affected only as path consumers. The required review must confirm that the three authorized moves implement ARCH-MANIFEST-001 rather than change repository architecture, and must identify whether any Manifest clarification is needed for the disputed surfaces in §3.
+**GOV-004 architecture significance:** Focused Architecture Review required before CHG-049 approval. The proposed effect is contained to three Manifest-owned responsibilities under one owner; no system interface, data contract, security model, runtime behavior, or new architectural mechanism is proposed; and a move would be reversible. CI and developer tooling are affected only as path consumers. The required review must determine—not assume—whether the three proposed moves implement ARCH-MANIFEST-001, whether the existing uppercase destinations are appropriate, and whether a Manifest clarification is needed.
 
 This record does not create the Focused Architecture Review, alter the Architecture Manifest, select a new repository architecture, or authorize an ADR. If the review determines that a Manifest clarification is required, that clarification is a separate governed change before any disputed surface moves.
 
@@ -116,3 +116,4 @@ The initial Draft overstated ARCH-MANIFEST-001 by treating `db/`, `openapi/`, `s
 | 0.1.0 | 2026-08-09 | Initial Draft repository-structure correction. | Chief Architect / Engineering Owner | CHG-049 |
 | 0.2.0 | 2026-08-09 | Revision Required addressed: narrowed relocation scope to Manifest-owned Source, Scripts, and Tests; adopted established directory names; added GOV-004 qualification, disputed-surface assessment, rollback, link-preservation, and branch-coordination controls. | Chief Architect / Engineering Owner | CHG-049 |
 | 0.2.1 | 2026-08-09 | Added AR-REP-001 as the required Focused Architecture Review consumer. | Chief Architect / Engineering Owner | CHG-049 |
+| 0.3.0 | 2026-08-09 | Revision Required addressed: treated existing uppercase folders as proposed destinations pending review, added explicit alternatives and participants through AR-REP-001, and preserved the pre-review uncertainty about a Manifest clarification or ADR. | Chief Architect / Engineering Owner | CHG-049 |
