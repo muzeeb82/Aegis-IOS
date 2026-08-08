@@ -3,7 +3,7 @@
 ```text
 Document ID: AR-I1-001
 Title: Authorization-Evidence Lifecycle and Scope Architecture Review
-Version: 0.1.1
+Version: 0.2.0
 Status: Draft
 Owner: Architecture Review Lead
 Classification: Informational
@@ -27,14 +27,14 @@ Scope: lifecycle, scope context, trusted time, revocation, availability, compati
 
 | Role / artifact | Required contribution |
 |---|---|
-| Architecture Review Lead | Own review scope, findings, readiness, and disposition. |
-| Candidate Decision Authority (Product Owner) | Confirm decision constraints; decision-authority basis must be recorded before any later ADR approval. |
-| I1 security owner / CHG-044 | Define authoritative lifecycle and validation implications. |
-| I3 portfolio/framework owner / CHG-047 | Define requested-scope provenance and AC impacts. |
-| SPEC-002 and SPEC-004 owners | Confirm data-contract and security impacts. |
-| Independent validator | Review evidence and compensating controls. |
+| Architecture Review Lead — Muzeeb ur Rahman Farooqi | Own review scope, findings, readiness, and disposition. |
+| Candidate Decision Authority (Product Owner) — Muzeeb ur Rahman Farooqi | Confirm decision constraints; decision-authority basis must be recorded before any later ADR approval. |
+| I1 security owner / CHG-044 — Muzeeb ur Rahman Farooqi | Define authoritative lifecycle and validation implications. |
+| I3 portfolio/framework owner / CHG-047 — Muzeeb ur Rahman Farooqi | Define requested-scope provenance and AC impacts. |
+| SPEC-002 and SPEC-004 owners — Muzeeb ur Rahman Farooqi | Confirm data-contract and security impacts. |
+| Validator — Muzeeb ur Rahman Farooqi (not independent) | Review evidence and compensating controls. |
 
-Role overlap must be recorded. If independent validation is impractical, the review records the limitation and compensating review before disposition.
+All listed roles are currently held by Muzeeb ur Rahman Farooqi. Validation is therefore not independent. Before a final decision-readiness disposition, an external or otherwise independent reviewer must be designated and must review the evidence bundle and any dissent disposition; this is the compensating control for the recorded overlap.
 
 ## 4. Evidence Plan
 
@@ -57,6 +57,43 @@ Findings: Pending. Dissent: None recorded; consultation must provide a dissent c
 
 Consultation is not open. Before RFC-002 may enter `In Review`, this record must identify named reviewers, affected owners, evidence inputs, a response method, an opening date, a closing date, and non-response treatment. Default non-response is recorded as no response, not consent or approval.
 
+### 7.1 Draft Consultation Setup — Not Open
+
+This setup prepares consultation only. It does not open consultation, establish consent, determine readiness, approve RFC-002, authorize an ADR, or authorize implementation.
+
+**Window and channel**
+
+- Proposed opening: 2026-08-11, 10:00 Asia/Kolkata (IST).
+- Proposed closing: 2026-08-15, 18:00 Asia/Kolkata (IST).
+- Authoritative response channel: top-level comments on GitHub PR #10.
+- Inline comments may identify artifact-specific findings, but must be summarized in a top-level PR #10 comment before the consultation closes.
+- The Architecture Review Lead records a dated consultation summary and preserves links to all response comments as the review record.
+
+**Required evidence inputs and access responsibilities**
+
+| Input | Pinned reference | Responsible owner | Required use |
+|---|---|---|---|
+| I1 authorization foundation | CHG-044 v1.1.0, commit `2e22b300a0344cc4963d486c17b9fe539b0992b4`; current `master` baseline commit `031e98d3702f09b62606aa4b6cc59137690f1838` | I1 security owner | Establish current evidence, audit, and authorization behavior. |
+| I3 authorized boundary | CHG-047 v1.0.0, commit `01890a75489ab7b1d0ccbc09b39fb1ba6467b2a2` | I3 portfolio/framework owner | Identify requested-scope provenance and governance-blocked AC-005/006 cases. |
+| Change assessment | CHG-048 v0.2.2, commit `fd6f231c9d4ae914e1c9a6932029200d836a233a` | Architecture Review Lead | Establish impacts, risks, and the assessment-only boundary. |
+| RFC proposal | RFC-002 v0.2.2, commit `fd6f231c9d4ae914e1c9a6932029200d836a233a` | Architecture Review Lead | Evaluate alternatives without selecting one prematurely. |
+| Normative data and security constraints | SPEC-002 v1.0.0 and SPEC-004 v1.0.0 at the current `master` baseline | SPEC-002 and SPEC-004 owners | Assess data-contract, security, migration, recovery, and validation effects. |
+
+**Review questions and evaluation**
+
+Responses must address the architecture question in §1 and evaluate each RFC-002 alternative using the §5 criteria: authority ownership, fail-closed behavior, least privilege, historical immutability, scope precision, concurrency, availability, migration compatibility, auditability, recovery, operational complexity, and I3 non-duplication. The review must specifically establish whether lifecycle validity, canonical scope matching, trusted time, and availability checks remain solely owned by I1.
+
+**Response, dissent, and exception handling**
+
+- Non-response is recorded as no response and is never consent or approval.
+- A late response is preserved in the record but does not automatically reopen consultation. The Architecture Review Lead decides whether a material late finding requires an extension or suspension and records the reason.
+- A dissent must be a top-level PR #10 comment labelled `Dissent`, including supporting evidence, risk, and requested resolution. The Architecture Review Lead records its disposition; unresolved material dissent prevents a decision-ready outcome.
+- Consultation may be extended or suspended for a material finding, missing evidence, unavailable required participant, unresolved dissent, or a change to the defined scope. Any such action is recorded in the PR and this review record before the original closing time where practicable.
+
+**Required output and disposition owner**
+
+The Architecture Review Lead owns the consultation summary, findings, dissent disposition, evidence index, and recommendation. A completed consultation may result only in additional evidence required, revision required, continued Draft, or a recommendation that RFC-002 may enter `In Review`; it cannot itself approve RFC-002, create an ADR, or authorize implementation.
+
 ## 8. Decision Readiness and Disposition
 
 Readiness requires completed evidence review, alternatives analysis, affected-owner input, risks and migration/recovery implications, dissent disposition, explicit recommendation, and no unresolved blocker. The review may dispose: RFC required, additional evidence required, revision required, or decision-ready. RFC-002 may reach `Approved for Decision` only after its own consultation and this review confirm readiness; only then may a Draft ADR be created.
@@ -77,3 +114,4 @@ Readiness requires completed evidence review, alternatives analysis, affected-ow
 |---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial Draft Full Architecture Review record for CHG-048 and RFC-002. | Architecture Review Lead |
 | 0.1.1 | 2026-08-09 | Clarified the Product Owner as a candidate Decision Authority pending an explicit recorded authority basis. | Architecture Review Lead |
+| 0.2.0 | 2026-08-09 | Added Draft-only consultation setup: named role holders, overlap limitation and compensating review, evidence inputs, proposed dates, PR #10 channel, response handling, and disposition controls. Consultation remains unopened. | Architecture Review Lead |
