@@ -21,3 +21,13 @@ ORDER BY id;
 ## Security Boundary
 
 Authorization denies requests without an active scope-matching role and an exact matching policy. Separation-of-duty conflicts deny the request. The implementation emits provider-neutral audit records for the I1 events defined by CHG-044; it does not grant system or investment approval authority.
+
+## Bounded Threat Model
+
+| Threat | I1 control | Boundary and remaining limitation |
+|---|---|---|
+| Identity spoofing | Provider-neutral identities are references only; no provider token or login flow is accepted in I1. | Live identity-provider assurance remains deferred. |
+| Privilege escalation | Authorization defaults to denial and requires active scope-matching role and exact policy. | Production policy administration is not implemented. |
+| Tampering and repudiation | Audit events bind their content to the preceding integrity token; protected record revisions are modeled as immutable envelope fields. | Durable key management and production retention are later work. |
+| Injection | I1 validation uses parameterized PostgreSQL values; no external input endpoint exists. | API input validation is deferred with the API contract. |
+| Audit destruction | The migration is additive and validation uses rollback-only synthetic data. | Backup and recovery execution remains a later release gate. |
