@@ -10,5 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install implementation tooling
+        run: pnpm install --frozen-lockfile
       - name: Validate repository
         run: sh scripts/validate_repository.sh
+      - name: Validate I0 foundation
+        run: pnpm check
+      - name: Audit production dependencies
+        run: pnpm audit --prod
