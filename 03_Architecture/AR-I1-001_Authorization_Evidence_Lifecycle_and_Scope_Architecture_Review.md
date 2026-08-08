@@ -3,7 +3,7 @@
 ```text
 Document ID: AR-I1-001
 Title: Authorization-Evidence Lifecycle and Scope Architecture Review
-Version: 0.1.0
+Version: 0.1.1
 Status: Draft
 Owner: Architecture Review Lead
 Classification: Informational
@@ -28,7 +28,7 @@ Scope: lifecycle, scope context, trusted time, revocation, availability, compati
 | Role / artifact | Required contribution |
 |---|---|
 | Architecture Review Lead | Own review scope, findings, readiness, and disposition. |
-| Product Owner / Decision Authority | Confirm decision constraints and approve any later ADR. |
+| Candidate Decision Authority (Product Owner) | Confirm decision constraints; decision-authority basis must be recorded before any later ADR approval. |
 | I1 security owner / CHG-044 | Define authoritative lifecycle and validation implications. |
 | I3 portfolio/framework owner / CHG-047 | Define requested-scope provenance and AC impacts. |
 | SPEC-002 and SPEC-004 owners | Confirm data-contract and security impacts. |
@@ -76,3 +76,4 @@ Readiness requires completed evidence review, alternatives analysis, affected-ow
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial Draft Full Architecture Review record for CHG-048 and RFC-002. | Architecture Review Lead |
+| 0.1.1 | 2026-08-09 | Clarified the Product Owner as a candidate Decision Authority pending an explicit recorded authority basis. | Architecture Review Lead |
