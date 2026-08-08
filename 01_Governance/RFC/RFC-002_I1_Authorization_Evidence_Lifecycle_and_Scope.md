@@ -3,11 +3,11 @@
 ```text
 Document ID: RFC-002
 Title: I1 Authorization-Evidence Lifecycle and Scope
-Version: 0.2.0
+Version: 0.2.1
 Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational
-Authority Level: Level 1 (Governance)
+Authority Level: Not Applicable — RFC outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, SPEC-002, SPEC-004, CHG-044, CHG-047, CHG-048
 Referenced By: None identified
 Related Change ID: CHG-048
@@ -60,7 +60,7 @@ Expiry, revocation, and scope-matching cases for I3 AC-005/006 are governance-bl
 
 ## 9. Consultation, Disposition, and ADR Path
 
-Consultation has not begun. Before `In Review`, GOV-004 §19 inputs, affected owners, reviewers, consultation window, Full Architecture Review record, evidence plan, dissent handling, and decision criteria must be prepared. Resulting ADRs: none. An ADR may be Drafted only after RFC consultation and Architecture Review establish decision readiness.
+Consultation has not begun. Before `In Review`, GOV-004 §19 inputs, affected owners, reviewers, consultation window, Full Architecture Review record, evidence plan, dissent handling, and decision criteria must be prepared. Resulting ADRs: none. A Draft ADR may be created only after RFC-002 reaches `Approved for Decision` under GOV-004 §25.1.
 
 ## 10. Revision History
 
@@ -68,3 +68,4 @@ Consultation has not begun. Before `In Review`, GOV-004 §19 inputs, affected ow
 |---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial proposal outline. | Chief Architect / Engineering Owner |
 | 0.2.0 | 2026-08-09 | Revision Required addressed: completed Draft RFC structure, qualification, alternatives, impacts, consultation path, and blocked-case treatment. | Chief Architect / Engineering Owner |
+| 0.2.1 | 2026-08-09 | Corrected informational Authority Level and specified the GOV-004 §25.1 Approved-for-Decision prerequisite for a Draft ADR. | Chief Architect / Engineering Owner |

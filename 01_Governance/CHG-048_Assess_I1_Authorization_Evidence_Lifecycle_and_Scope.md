@@ -3,8 +3,8 @@
 ```text
 Document ID: CHG-048
 Title: Assess I1 Authorization-Evidence Lifecycle and Scope
-Version: 0.2.0
-Status: Draft — Revision Required
+Version: 0.2.1
+Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
@@ -64,3 +64,4 @@ Review Result: Revision Required. The initial Draft lacked complete initiation, 
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial Draft impact analysis. | Chief Architect / Engineering Owner | CHG-048 |
 | 0.2.0 | 2026-08-09 | Revision Required addressed: completed metadata, assessment-only proposal, Full Architecture Review qualification, impacts, risks, validation, and required decision path. | Chief Architect / Engineering Owner | CHG-048 |
+| 0.2.1 | 2026-08-09 | Corrected the artifact Status to the canonical Draft maturity state; §7 retains the Revision Required review result. | Chief Architect / Engineering Owner | CHG-048 |
