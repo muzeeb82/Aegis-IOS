@@ -10,7 +10,7 @@ It does not provide a user-facing login, a configured identity provider, product
 
 Run the repository quality checks before using the migration harness. For a disposable local database, start the PostgreSQL service from `docker-compose.yml`, set `DATABASE_URL` from the local configuration template, then run migration status or apply commands.
 
-The I1 migration is additive. Recovery is performed by restoring a pre-migration local database snapshot; no destructive rollback is supplied or required for this additive initial schema. Reconcile the migration ledger with:
+The I1 migration is additive. CI executes a synthetic rollback: it drops the five I1 tables inside a PostgreSQL transaction, rolls the transaction back, and confirms every table is restored. This demonstrates recoverability without changing a retained environment. Reconcile the migration ledger with:
 
 ```sql
 SELECT id, checksum, applied_at

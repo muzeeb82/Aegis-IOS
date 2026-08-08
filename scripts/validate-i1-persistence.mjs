@@ -38,11 +38,13 @@ try {
   await client.query(
     `
     INSERT INTO i1_policy_references (
-      id, lifecycle_state, role_name, action_name, resource_name, scope, created_at,
+      id, lifecycle_state, role_name, action_name, resource_name, scope, target_sensitivity,
+      target_lifecycle_state, created_at,
       created_by, updated_at, updated_by, correlation_id, integrity_token, sensitivity
     ) VALUES (
       'validation-policy', 'active', 'validator', 'read', 'identity-record', 'synthetic',
-      $1, 'validator', $1, 'validator', 'validation-correlation', 'validation-token', 'Internal'
+      'Internal', 'active', $1, 'validator', $1, 'validator', 'validation-correlation',
+      'validation-token', 'Internal'
     )
   `,
     [timestamp],

@@ -48,6 +48,8 @@ CREATE TABLE i1_policy_references (
   action_name text NOT NULL,
   resource_name text NOT NULL,
   scope text NOT NULL,
+  target_sensitivity text NOT NULL,
+  target_lifecycle_state text NOT NULL,
   created_at timestamptz NOT NULL,
   created_by text NOT NULL,
   updated_at timestamptz NOT NULL,

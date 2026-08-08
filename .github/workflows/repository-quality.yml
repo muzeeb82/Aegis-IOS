@@ -49,6 +49,7 @@ jobs:
           pnpm migration:apply
           pnpm migration:status
           pnpm i1:persistence:check
+          pnpm i1:recovery:check
       - name: Validate implementation foundation
         run: pnpm check
       - name: Audit locked dependencies

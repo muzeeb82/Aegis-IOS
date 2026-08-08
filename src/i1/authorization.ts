@@ -10,6 +10,8 @@ export interface PolicyReference {
   readonly action: string;
   readonly resource: string;
   readonly scope: string;
+  readonly sensitivity: string;
+  readonly lifecycleState: string;
 }
 
 export interface AuthorizationRequest {
@@ -80,7 +82,9 @@ export function evaluateAuthorization(
       roles.includes(policy.role) &&
       policy.action === request.action &&
       policy.resource === request.resource &&
-      matchesScope(policy.scope, request.scope),
+      matchesScope(policy.scope, request.scope) &&
+      policy.sensitivity === request.sensitivity &&
+      policy.lifecycleState === request.lifecycleState,
   );
 
   return {
