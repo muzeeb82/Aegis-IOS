@@ -3,15 +3,15 @@
 ```text
 Document ID: SPEC-008
 Title: Validation and Conformance Specification
-Version: 0.1.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, AR-SYS-001
+Depends On: PRD-001, ADR-004, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, AR-SYS-001
 Referenced By: SPEC-009, STD-001, IMP-001, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-034
 ```
 
 ## 1. Validation Model

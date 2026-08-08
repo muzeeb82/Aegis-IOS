@@ -3,15 +3,15 @@
 ```text
 Document ID: SPEC-009
 Title: Extension Package Specification
-Version: 0.1.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-006, SPEC-008, AR-SYS-001
+Depends On: PRD-001, ADR-004, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-006, SPEC-008, AR-SYS-001
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change ID: CHG-018
+Change ID: CHG-034
 ```
 
 ## 1. Purpose and Scope
