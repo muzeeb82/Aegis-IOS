@@ -3,7 +3,7 @@
 ```text
 Document ID: FRM-001
 Title: Governed Investment Decision Framework
-Version: 0.1.0
+Version: 1.0.0
 Status: Approved
 Owner: Product Owner / Investment Framework Owner
 Classification: Normative
@@ -62,3 +62,4 @@ The framework fails when authority is absent, required evidence lacks provenance
 | 0.1.0 | 2026-08-08 | Initial strategy-neutral decision-framework Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Added §1.1 Applicability and §1.2 Framework-State Applicability, realizing SPEC-001 §9's eligible-decision-types and Draft/retired-applicability requirements. | Chief Architect / Product Owner | CHG-019 |
 | 0.1.0 | 2026-08-08 | Added GOV-001 to `Depends On`: `Authority Level: Level 6` directly consumes GOV-001 §3's authority model. | Chief Architect / Product Owner | CHG-023 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-043: this artifact's approval transition (Draft → Approved, Change ID CHG-035) was made under CHG-035 but never received a revision-history row or version increment. Version corrected to 1.0.0 to match the Approved-baseline convention used elsewhere in this project; no framework content changed. | Chief Architect / Product Owner | CHG-043 |

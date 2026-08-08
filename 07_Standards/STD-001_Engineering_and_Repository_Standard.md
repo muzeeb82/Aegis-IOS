@@ -3,7 +3,7 @@
 ```text
 Document ID: STD-001
 Title: Engineering and Repository Standard
-Version: 0.1.0
+Version: 1.0.0
 Status: Approved
 Owner: Chief Architect
 Classification: Normative
@@ -60,3 +60,4 @@ Unapproved design and implementation work remains on a Draft/feature branch. `ma
 | 0.1.0 | 2026-08-08 | Corrected `Authority Level` from Level 6 to Level 7 to match GOV-001 §3's Standards assignment. No substantive rule changed. | Chief Architect / Product Owner | CHG-014 |
 | 0.1.0 | 2026-08-08 | Added GOV-001 to `Depends On`: `Authority Level: Level 7` directly consumes GOV-001 §3's authority model. | Chief Architect / Product Owner | CHG-023 |
 | 0.1.0 | 2026-08-08 | Added descriptive Purpose and Scope sections without changing any engineering rule or quality gate. | Chief Architect / Product Owner | CHG-022 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-043: this artifact's approval transition (Draft → Approved, Change ID CHG-035) was made under CHG-035 but never received a revision-history row or version increment. Version corrected to 1.0.0 to match the Approved-baseline convention used elsewhere in this project; no engineering rule or quality gate changed. | Chief Architect / Product Owner | CHG-043 |

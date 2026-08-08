@@ -3,7 +3,7 @@
 ```text
 Document ID: IMP-001
 Title: Implementation, Test, and Release Plan
-Version: 0.1.0
+Version: 1.0.0
 Status: Approved (Planning Only; Implementation Requires GOV-002 Authorization)
 Owner: Chief Architect / Engineering Owner
 Classification: Informational
@@ -50,7 +50,7 @@ Release candidates identify source commit, build artifact, dependency inventory,
 
 ## 6. Current Disposition
 
-Planning complete at Draft level. No code, infrastructure, deployment, release, or tag is authorized by this document.
+Planning complete; Approved (Planning Only) under CHG-035. No code, infrastructure, deployment, release, or tag is authorized by this document; implementation requires a separate GOV-002 authorization per §1 Entry Conditions.
 
 ## 7. Validation Checklist
 
@@ -67,3 +67,4 @@ Planning complete at Draft level. No code, infrastructure, deployment, release, 
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial implementation, test, and release-plan Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Added a descriptive Scope section without changing planning conditions, implementation authorization, or release controls. | Chief Architect / Product Owner | CHG-022 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-043: this artifact's approval transition (Draft → Approved (Planning Only), Change ID CHG-035) was made under CHG-035 but never received a revision-history row or version increment; corrected to 1.0.0. Also corrected §6 Current Disposition's stale "Planning complete at Draft level" wording to accurately reflect the Approved status; no planning scope, entry condition, or authorization changed. | Chief Architect / Product Owner | CHG-043 |

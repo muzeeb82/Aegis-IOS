@@ -3,7 +3,7 @@
 ```text
 Document ID: EX-001
 Title: Governed Decision Worked Example
-Version: 0.1.0
+Version: 1.0.0
 Status: Approved (Illustrative)
 Owner: Product Owner / Training Owner
 Classification: Informational
@@ -48,3 +48,4 @@ An authorized learner can traverse Decision → Portfolio Snapshot → Evidence 
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial synthetic worked-example Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-043: this artifact's approval transition (Draft → Approved (Illustrative), Change ID CHG-035) was made under CHG-035 but never received a revision-history row or version increment. Version corrected to 1.0.0 to match the Approved-baseline convention used elsewhere in this project; no scenario content changed. | Chief Architect / Product Owner | CHG-043 |
