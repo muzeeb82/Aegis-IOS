@@ -4,21 +4,21 @@
 Document ID: CHG-023
 Title: Audit Delivery-Artifact GOV-001 Dependencies
 Version: 0.1.0
-Status: Draft — Reviewed (Pending Minor Approval)
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, FRM-001, STD-001, PB-001, EX-001, IMP-001, TRN-001, AR-PKG-001
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
 
 ```text
 Change ID: CHG-023
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -76,6 +76,7 @@ Superseded by §9 following Review. Preserved here for historical accuracy rathe
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Minor Draft to audit and, only where evidenced, correct GOV-001 dependencies in delivery artifacts, responding to AR-PKG-001 §9.3 finding M-M. | Chief Architect / Product Owner | CHG-023 |
+| 0.2.0 | 2026-08-08 | Completed the target-by-target direct-relationship audit; approved and closed the evidenced metadata corrections only. | Chief Architect / Product Owner | CHG-023 |
 
 ## 9. Review Activity
 
@@ -109,3 +110,37 @@ Confirmed: GOV-001 is absent from all five candidate targets' `Depends On`, and 
 - No unresolved Review finding remains regarding the audit's design.
 
 This Review does not approve, implement, validate, or close CHG-023, and does not itself add GOV-001 to any target's `Depends On`.
+
+## 10. Target-by-Target Direct-Relationship Audit
+
+| Target | Evidence | Disposition |
+|---|---|---|
+| FRM-001 | `Authority Level: Level 6` has meaning only through GOV-001 §3's Framework assignment. | Direct consumer — add GOV-001. |
+| STD-001 | `Authority Level: Level 7` is explicitly corrected against GOV-001 §3 in its CHG-014 revision-history entry. | Direct consumer — add GOV-001. |
+| PB-001 | `Authority Level: Level 8` is explicitly corrected against GOV-001 §3 in its CHG-014 revision-history entry. | Direct consumer — add GOV-001. |
+| EX-001 | Its Informational classification is governed as a representation field, but no body or metadata semantics directly consumes GOV-001's authority model or operative rule. | No direct consumer — unchanged. |
+| IMP-001 | Its Informational classification and non-applicable authority statement do not directly consume GOV-001; its operative controls rely on GOV-002, GOV-004, ADR-004, specifications, and STD-001. | No direct consumer — unchanged. |
+
+## 11. Approval Activity
+
+Approval Result: Approved.
+
+The approved Minor scope is limited to adding GOV-001 to FRM-001, STD-001, and PB-001 `Depends On` fields and recording one revision-history entry on each. EX-001 and IMP-001 are explicitly excluded because the audit found no direct relationship.
+
+## 12. Implementation Activity
+
+Implementation Result: Completed.
+
+GOV-001 was added once, in canonical governing-source position, to the three approved target headers. No other target metadata or body content was changed by CHG-023.
+
+## 13. Validation Activity
+
+Validation Result: Passed.
+
+Validation confirmed the three positive targets retain their existing dependencies and add GOV-001 once; EX-001 and IMP-001 remain unchanged; and each positive target has one corresponding CHG-023 revision-history row. The scope does not modify `Referenced By`, Status, Version, Owner, or body content. `git diff --check` passed.
+
+## 14. Closure Activity
+
+Closure Result: Closed.
+
+CHG-023 closes only the evidenced delivery-artifact GOV-001 dependency corrections. It does not close CHG-022's separate Purpose/Scope work or authorize release activity.

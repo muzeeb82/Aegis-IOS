@@ -8,11 +8,19 @@ Status: Draft (Pending Internal Review)
 Owner: Product Owner / Operations Owner
 Classification: Normative
 Authority Level: Level 8
-Depends On: FRM-001, SPEC-001, SPEC-007
+Depends On: GOV-001, FRM-001, SPEC-001, SPEC-007
 Referenced By: EX-001, TRN-001 (proposed)
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
 ```
+
+## Purpose
+
+Provides the operational procedure for applying an approved investment-decision framework while preserving evidence, authority, review, execution, and outcome records. It does not define investment strategy, product requirements, framework rules, or approval authority.
+
+## Scope
+
+Applies to the execution and recovery procedure for governed decision operations described below. It does not authorize an action, supersede an approved framework or specification, or create obligations beyond the procedure's stated steps and controls.
 
 ## 1. Procedure
 
@@ -47,3 +55,5 @@ Decision revision, review/approval, framework execution, evidence graph, authori
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial governed decision-operations playbook Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Authority Level` from Level 6 to Level 8 to match GOV-001 §3's Playbooks assignment. No substantive rule changed. | Chief Architect / Product Owner | CHG-014 |
+| 0.1.0 | 2026-08-08 | Added GOV-001 to `Depends On`: `Authority Level: Level 8` directly consumes GOV-001 §3's authority model. | Chief Architect / Product Owner | CHG-023 |
+| 0.1.0 | 2026-08-08 | Added descriptive Purpose and Scope sections without changing any operating procedure or control. | Chief Architect / Product Owner | CHG-022 |

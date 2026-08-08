@@ -9,7 +9,7 @@ Owner: Chief Architect / Product Owner
 Classification: Informational — Architecture Review
 Authority Level: Not Applicable — Informational review outside the normative authority hierarchy
 Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003
-Referenced By: ADR-004, CHG-013, CHG-018, CHG-020, CHG-021, RFC-001, RRC-001, AR-PKG-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008
+Referenced By: ADR-004, CHG-013, CHG-018, CHG-020, CHG-021, RFC-001, RRC-001, AR-PKG-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009
 Last Updated: 2026-08-08
 Change ID: Not assigned — design package remains uncommitted and unapproved
 ```
@@ -401,3 +401,4 @@ Per GOV-004 §14.1, this record therefore transitions `In Review → Revision Re
 | 0.1.0 | 2026-08-08 | Initial complete-system architecture-review Draft for internal design and traceability review. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Executed the GOV-004 §14.1 `Draft → In Review → Revision Required` transition under CHG-020. Updated Status and §16 Disposition with the truthful review outcome; full evidence recorded in CHG-020 §14. No other section changed. | Chief Architect / Product Owner | CHG-020 |
+| 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer of the extension and compatibility review context under CHG-018; no review conclusion changed. | Chief Architect / Product Owner | CHG-018 |

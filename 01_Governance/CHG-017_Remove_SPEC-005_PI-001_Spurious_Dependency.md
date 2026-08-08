@@ -4,21 +4,21 @@
 Document ID: CHG-017
 Title: Remove SPEC-005 PI-001 Spurious Dependency
 Version: 0.1.0
-Status: Draft — Reviewed (Pending Minor Approval)
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, AR-PKG-001, PI-001, SPEC-005
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
 
 ```text
 Change ID: CHG-017
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -100,3 +100,51 @@ Review Result: Passed — Ready for Minor Approval
 - No unresolved Review finding remains.
 
 This Review does not approve, implement, validate, or close CHG-017.
+
+## 10. Approval Activity
+
+```text
+Approval State: Approved — Pending Implementation
+Approver: Chief Architect / Product Owner
+Approval Date: 2026-08-08
+Authority Basis: SPEC-005 artifact ownership; GOV-002 Minor-change controls
+Approved Scope: Remove only `PI-001` from SPEC-005's Depends On field and add one revision-history row citing CHG-017. No other SPEC-005 content changes.
+Approval Result: Approved
+```
+
+## 11. Implementation Activity
+
+```text
+Implementation State: Implemented — Pending Validation
+Implementer: Chief Architect / Product Owner
+Implementation Date: 2026-08-08
+Implementation Result: Completed within Approved Scope
+```
+
+`PI-001` was removed from SPEC-005's `Depends On` field, preserving all remaining dependencies in their existing order, and one revision-history row citing CHG-017 was added.
+
+## 12. Validation Activity
+
+```text
+Validation State: Validated
+Validator: Chief Architect / Product Owner
+Validation Date: 2026-08-08
+Validation Result: Passed
+```
+
+- Passed: SPEC-005's `Depends On` field no longer contains `PI-001` and preserves its other six dependencies unchanged.
+- Passed: a full-file review confirms SPEC-005 contains no operative PI-001 rule, citation, or constraint.
+- Passed: PI-001's `Referenced By` field does not assert SPEC-005 as a consumer.
+- Passed: the SPEC-005 diff is confined to the `Depends On` field and one revision-history row.
+- Passed: `git diff --check` passes; no approval of SPEC-005, RRC-001 execution, Phase C4 closure, or release claim was introduced.
+
+## 13. Closure Activity
+
+```text
+Closure State: Closed
+Closer: Chief Architect / Product Owner
+Closure Date: 2026-08-08
+Closure Result: Closed — Validation Passed
+```
+
+CHG-017 is Closed. SPEC-005 no longer represents a Runtime instruction artifact as a direct governing dependency.

@@ -8,7 +8,7 @@ Status: Draft (Pending Internal Review)
 Owner: Product Owner / Investment Framework Owner
 Classification: Normative
 Authority Level: Level 6
-Depends On: PRD-001, SPEC-001
+Depends On: GOV-001, PRD-001, SPEC-001
 Referenced By: PB-001, EX-001, TRN-001 (proposed)
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
@@ -61,3 +61,4 @@ The framework fails when authority is absent, required evidence lacks provenance
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial strategy-neutral decision-framework Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Added §1.1 Applicability and §1.2 Framework-State Applicability, realizing SPEC-001 §9's eligible-decision-types and Draft/retired-applicability requirements. | Chief Architect / Product Owner | CHG-019 |
+| 0.1.0 | 2026-08-08 | Added GOV-001 to `Depends On`: `Authority Level: Level 6` directly consumes GOV-001 §3's authority model. | Chief Architect / Product Owner | CHG-023 |

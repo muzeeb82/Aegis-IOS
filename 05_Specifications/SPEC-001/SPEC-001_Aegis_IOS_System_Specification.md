@@ -9,7 +9,7 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
 Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003, AR-SYS-001
-Referenced By: CHG-003, CHG-004, CHG-005, CHG-012, CHG-013, CHG-018, CHG-019, RFC-001, RRC-001, AR-PKG-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
+Referenced By: CHG-003, CHG-004, CHG-005, CHG-012, CHG-013, CHG-018, CHG-019, RFC-001, RRC-001, AR-PKG-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
 Last Updated: 2026-08-08
 Change ID: CHG-013
 ```
@@ -334,6 +334,7 @@ SPEC-001 requires the following downstream specifications before implementation 
 - SPEC-006 — Connector and Integration Specification.
 - SPEC-007 — Runtime, Reliability, Observability, and Deployment Specification.
 - SPEC-008 — Validation and Conformance Specification.
+- SPEC-009 — Extension Package Specification.
 
 These artifacts may elaborate SPEC-001 but shall not contradict it or redefine PRD-001.
 
@@ -371,6 +372,7 @@ Production implementation shall not begin until:
 | 0.2.0 | 2026-08-08 | Complete-system behavioral-contract Draft for internal review; no approval or implementation claimed. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.2.0 | 2026-08-08 | Assigned Change ID CHG-013, governing this existing Draft's retention and tracking. No specification text changed; Status remains Draft (Pending Internal Review and Architecture Approval). | Chief Architect / Product Owner | CHG-013 |
 | 0.2.0 | 2026-08-08 | Corrected `Referenced By` from "None identified" to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
+| 0.2.0 | 2026-08-08 | Added SPEC-009 as the required detailed elaboration of the existing extension-package contract and as a direct consumer; no upstream requirement or invariant changed. | Chief Architect / Product Owner | CHG-018 |
 
 ## 24. Current Disposition
 

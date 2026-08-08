@@ -4,21 +4,21 @@
 Document ID: CHG-021
 Title: Correct ADR-004 and RFC-001 Decision Readiness
 Version: 0.1.0
-Status: Draft (Pending Review)
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-003, PRD-001, AR-PKG-001, AR-SYS-001, RFC-001, ADR-004
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Proposed
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
 
 ```text
 Change ID: CHG-021
-Change Lifecycle State: Proposed
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -70,7 +70,7 @@ Affected considerations include architecture boundaries, responsibility allocati
 
 ## 7. Current Disposition
 
-Proposed. No architecture decision, consultation completion, status transition, or target-artifact modification is claimed.
+Superseded by §13 following Review, Approval, Implementation, Validation, and Closure. Preserved as the original proposal disposition. CHG-021 is Closed, but neither ADR-004 nor RFC-001 is Approved and no architecture or implementation authorization is created by this correction.
 
 ## 8. Revision History
 
@@ -78,3 +78,70 @@ Proposed. No architecture decision, consultation completion, status transition, 
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial proposal to correct ADR-004/RFC-001 dependencies and decision-readiness defects recorded as CR-3 and M-C, M-D, M-F, and M-G in AR-PKG-001 §9. | Chief Architect / Product Owner | CHG-021 |
 | 0.1.0 | 2026-08-08 | Added PRD-001 as a direct dependency because the proposed ADR/RFC impact and boundary analysis consumes the approved product requirements. | Chief Architect / Product Owner | CHG-021 |
+| 0.1.0 | 2026-08-08 | Reviewed, approved, implemented, validated, and closed: corrected direct ADR-003 dependencies; completed Draft decision-readiness content and RFC consultation evidence; recorded role-separation limitation and compensating review; resolved the RFC's domain-responsibility interpretation; and retained truthful non-approval statuses. | Chief Architect / Product Owner | CHG-021 |
+
+## 9. Review Activity
+
+```text
+Review State: Reviewed — Pending Major Approval
+Reviewer: Chief Architect / Product Owner
+Review Date: 2026-08-08
+Review Result: Passed — Ready for Major Approval
+```
+
+The Review verified AR-PKG-001 findings CR-3, M-C, M-D, M-F, and M-G against the live headers and content of ADR-004, RFC-001, AR-SYS-001, ADR-003, and GOV-004 §§19, 21, 24, 25, and 29. The findings were substantiated: ADR-003 was omitted from both target dependency declarations; ADR-004 lacked several required Draft decision-readiness categories; RFC-001 lacked required consultation/readiness content; and the RFC's domain-overlap question had no recorded disposition.
+
+The Review approved the bounded corrective approach in §3 because it makes the records truthful and reviewable without deciding the architecture, changing PRD-001, or masking AR-SYS-001's `Revision Required` state. The designated roles still overlap and no independent reviewer is currently designated; that limitation must be disclosed with a compensating validation review, not treated as approval evidence.
+
+## 10. Approval Activity
+
+```text
+Approval State: Approved — Pending Implementation
+Approver: Chief Architect / Product Owner
+Approval Date: 2026-08-08
+Authority Basis: GOV-001 authority model; GOV-002 Major-change process; GOV-004 §§19–29; ADR-003
+Approved Scope: CHG-021 §3 and §4 only
+Approval Result: Approved with Conditions
+```
+
+Conditions: implementation shall preserve ADR-004 as Draft and RFC-001 as no more than `Revision Required`; it shall not claim independent review, architecture approval, or implementation authorization; it shall record AR-SYS-001's actual `Revision Required` state; and it shall confine the domain-responsibility disposition to interpreting the existing AR-SYS-001 responsibility table rather than changing architectural or product ownership.
+
+## 11. Implementation Activity
+
+```text
+Implementation State: Implemented — Pending Validation
+Implementer: Chief Architect / Product Owner
+Implementation Date: 2026-08-08
+Implementation Result: Completed within Approved Scope
+```
+
+Implementation added ADR-003 to the direct `Depends On` fields of ADR-004 and RFC-001. ADR-004 received only Draft decision-readiness structure required by GOV-004 §24: its architecture question, rationale, impact analysis, affected artifacts and owners, decision administration, implementation/validation implications, and readiness limitations. RFC-001 received its missing GOV-004 §19/§21 content, including the recorded consultation, impact analysis, affected owners, migration/security/operational considerations, comments/dissent, resulting-ADR relationship, and disposition.
+
+The RFC recorded that multi-domain requirement coverage is traceability and collaboration, not duplicate canonical ownership; it did not alter AR-SYS-001's responsibilities, ADR-003's authority boundary, or PRD-001. RFC-001 transitioned `Draft → In Review → Revision Required` because AR-SYS-001 is still `Revision Required` and no independent reviewer is designated. ADR-004 remained Draft. No implementation artifact, product requirement, specification, governance rule, or Architecture Review was modified.
+
+## 12. Validation Activity
+
+```text
+Validation State: Validated
+Validator: Chief Architect / Product Owner
+Validation Date: 2026-08-08
+Validation Result: Passed
+Role-Separation Disclosure: Implementer and Validator overlap because no separate reviewer is currently designated. The compensating control was a separate, post-implementation criteria review against CHG-021 §6 and GOV-004 §§19, 21, 24, 25, and 29.
+```
+
+- Passed: both target headers now declare ADR-003, and the remaining declared dependencies are directly consumed by their contents.
+- Passed: ADR-004 now contains every GOV-004 §24 category applicable to a Draft ADR, explicitly recording unset decision date, no supersession, and remaining readiness limitations rather than inventing approval evidence.
+- Passed: RFC-001 now contains every GOV-004 §19 category, and its consultation record identifies the owner, reviewer-designation limitation, affected owners, comments, responses, unresolved concerns, and final `Revision Required` disposition.
+- Passed: the domain-overlap question is resolved as an interpretation of existing domain responsibilities; no PRD-001 requirement, ADR-003 boundary, architecture decision, or implementation authorization changed.
+- Passed: CHG-020's outcome is honored. AR-SYS-001 remains `Revision Required`; ADR-004's corresponding checklist remains unchecked; neither target claims approval.
+- Passed: `git diff --check` completed without errors.
+
+## 13. Closure Activity
+
+```text
+Closure State: Closed
+Closure Date: 2026-08-08
+Closure Result: Closed — Validation Passed
+```
+
+CHG-021 closes the identified record-completeness, traceability, consultation, and readiness-reporting defects only. It does not close the separate AR-SYS-001 corrections, designate an independent reviewer, approve the RFC or ADR, approve architecture, or authorize implementation. Those remain separate prerequisite work.

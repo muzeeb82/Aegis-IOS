@@ -8,11 +8,19 @@ Status: Draft (Pending Internal Review)
 Owner: Chief Architect
 Classification: Normative
 Authority Level: Level 7
-Depends On: GOV-002, GOV-003, GOV-004, ADR-004, SPEC-001, SPEC-008
+Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, SPEC-001, SPEC-008
 Referenced By: IMP-001 (proposed)
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
 ```
+
+## Purpose
+
+Establishes the engineering and repository-quality rules that apply when approved Aegis IOS design is realized in code, configuration, tests, and supporting delivery material. It does not define product requirements, make architecture decisions, or approve implementation or release.
+
+## Scope
+
+Applies to the engineering practices, quality gates, and branch-and-review controls stated below. It does not replace the authority of approved governance, architecture, requirements, or release-readiness artifacts.
 
 ## 1. Rules
 
@@ -50,3 +58,5 @@ Unapproved design and implementation work remains on a Draft/feature branch. `ma
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial engineering and repository standard Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Authority Level` from Level 6 to Level 7 to match GOV-001 §3's Standards assignment. No substantive rule changed. | Chief Architect / Product Owner | CHG-014 |
+| 0.1.0 | 2026-08-08 | Added GOV-001 to `Depends On`: `Authority Level: Level 7` directly consumes GOV-001 §3's authority model. | Chief Architect / Product Owner | CHG-023 |
+| 0.1.0 | 2026-08-08 | Added descriptive Purpose and Scope sections without changing any engineering rule or quality gate. | Chief Architect / Product Owner | CHG-022 |

@@ -4,21 +4,21 @@
 Document ID: CHG-022
 Title: Clarify Delivery-Artifact Purpose and Scope
 Version: 0.1.0
-Status: Draft — Reviewed (Pending Minor Approval)
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-002, GOV-003, STD-001, PB-001, IMP-001, AR-PKG-001
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
 
 ```text
 Change ID: CHG-022
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -75,6 +75,7 @@ Superseded by §9 following Review. Preserved here for historical accuracy rathe
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Minor Draft to clarify the existing Purpose/Scope boundaries of STD-001, PB-001, and IMP-001, responding to AR-PKG-001 §9.3 finding M-L. | Chief Architect / Product Owner | CHG-022 |
+| 0.2.0 | 2026-08-08 | Approved, implemented, validated, and closed the descriptive Purpose/Scope clarification. | Chief Architect / Product Owner | CHG-022 |
 
 ## 9. Review Activity
 
@@ -99,3 +100,27 @@ Review Result: Passed — Ready for Minor Approval
 - No unresolved Review finding remains.
 
 This Review does not approve, implement, validate, or close CHG-022. Approval should confirm that the actual drafted Purpose/Scope wording (not yet written) is checked against §5's guardrail before Implementation.
+
+## 10. Approval Activity
+
+Approval Result: Approved.
+
+The approved text is descriptive only: Purpose and Scope for STD-001 and PB-001, and Scope for IMP-001. It must preserve existing rules, procedure, planning-only status, and implementation prohibition without adding a requirement, authority, approval condition, or release gate.
+
+## 11. Implementation Activity
+
+Implementation Result: Completed.
+
+STD-001 and PB-001 received concise Purpose and Scope sections before their existing numbered content. IMP-001 received a concise Scope section before its Entry Conditions. Each target received one CHG-022 revision-history entry; no existing content was altered.
+
+## 12. Validation Activity
+
+Validation Result: Passed.
+
+Validation confirmed the new sections explain existing responsibility and boundaries only. STD-001 and PB-001 retain all existing normative rules and procedures; IMP-001 retains its planning-only, implementation-not-authorized boundary. No target metadata, lifecycle state, authority level, dependency, reference, or version changed under CHG-022. `git diff --check` passed.
+
+## 13. Closure Activity
+
+Closure Result: Closed.
+
+CHG-022 closes only the Purpose/Scope representation correction. It does not authorize implementation, release, or RRC-001 execution.

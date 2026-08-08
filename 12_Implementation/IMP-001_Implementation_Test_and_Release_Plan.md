@@ -14,6 +14,10 @@ Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
 ```
 
+## Scope
+
+Applies only to planning the ordered implementation, testing, and release-readiness work that may follow approved design and change authorization. It neither authorizes code, infrastructure, deployment, release, or tagging nor replaces the approval and readiness conditions stated elsewhere in this plan.
+
 ## 1. Entry Conditions
 
 Implementation begins only after AR-SYS-001 and RFC-001 complete review, ADR-004 and applicable specifications are Approved, security risks are reviewed, requirements trace to tests, and a GOV-002 change authorizes the exact increment.
@@ -62,3 +66,4 @@ Planning complete at Draft level. No code, infrastructure, deployment, release, 
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial implementation, test, and release-plan Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Added a descriptive Scope section without changing planning conditions, implementation authorization, or release controls. | Chief Architect / Product Owner | CHG-022 |

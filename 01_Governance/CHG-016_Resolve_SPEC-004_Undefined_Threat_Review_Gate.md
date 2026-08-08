@@ -4,21 +4,21 @@
 Document ID: CHG-016
 Title: Resolve SPEC-004 Undefined Threat Review Gate
 Version: 0.1.0
-Status: Draft — Reviewed (Pending Minor Approval)
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, AR-PKG-001, SPEC-004
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
 
 ```text
 Change ID: CHG-016
-Change Lifecycle State: Reviewed
+Change Lifecycle State: Closed
 Requestor: Chief Architect / Product Owner
 Change Owner: Chief Architect / Product Owner
 Artifact Owner: Chief Architect / Product Owner
@@ -101,3 +101,51 @@ Review Result: Passed — Ready for Minor Approval
 - No unresolved Review finding remains.
 
 This Review does not approve, implement, validate, or close CHG-016.
+
+## 10. Approval Activity
+
+```text
+Approval State: Approved — Pending Implementation
+Approver: Chief Architect / Product Owner
+Approval Date: 2026-08-08
+Authority Basis: SPEC-004 artifact ownership; GOV-002 Minor-change controls
+Approved Scope: Change SPEC-004's Status field exactly as specified in §3 and add one revision-history row citing CHG-016. No other SPEC-004 content changes.
+Approval Result: Approved
+```
+
+## 11. Implementation Activity
+
+```text
+Implementation State: Implemented — Pending Validation
+Implementer: Chief Architect / Product Owner
+Implementation Date: 2026-08-08
+Implementation Result: Completed within Approved Scope
+```
+
+SPEC-004's Status was changed to `Draft (Pending Internal Review and Architecture Approval)`, and one revision-history row citing CHG-016 was added. Its §8 Security Release Gates were not changed.
+
+## 12. Validation Activity
+
+```text
+Validation State: Validated
+Validator: Chief Architect / Product Owner
+Validation Date: 2026-08-08
+Validation Result: Passed
+```
+
+- Passed: SPEC-004's Status exactly matches §3's approved replacement text.
+- Passed: SPEC-004 §8 retains `- [ ] Threat model reviewed.` unchanged and unchecked.
+- Passed: a repository-wide review found no live governed artifact that defines or relies on `Threat Review` as an independent lifecycle state.
+- Passed: the SPEC-004 diff is confined to the Status field and one revision-history row.
+- Passed: `git diff --check` passes; no approval of SPEC-004, RRC-001 execution, Phase C4 closure, or release claim was introduced.
+
+## 13. Closure Activity
+
+```text
+Closure State: Closed
+Closer: Chief Architect / Product Owner
+Closure Date: 2026-08-08
+Closure Result: Closed — Validation Passed
+```
+
+CHG-016 is Closed. The correction removes an undefined Draft-status qualifier while preserving SPEC-004's substantive, unmet threat-model release gate.

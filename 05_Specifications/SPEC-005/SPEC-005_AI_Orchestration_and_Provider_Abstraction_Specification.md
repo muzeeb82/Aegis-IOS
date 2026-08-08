@@ -8,7 +8,7 @@ Status: Draft (Pending Internal Review and Architecture Approval)
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PI-001, PRD-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, AR-SYS-001
+Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, AR-SYS-001
 Referenced By: CHG-017, SPEC-008, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
@@ -65,3 +65,4 @@ Provider conformance tests cover request mapping, structured output, tool behavi
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial AI orchestration and provider-abstraction Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added CHG-017, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |
+| 0.1.0 | 2026-08-08 | Removed unsupported PI-001 entry from `Depends On`; no operative SPEC-005 dependency on PI-001 exists. | Chief Architect / Product Owner | CHG-017 |
