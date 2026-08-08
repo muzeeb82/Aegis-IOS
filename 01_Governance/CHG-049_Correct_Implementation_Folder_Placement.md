@@ -3,13 +3,13 @@
 ```text
 Document ID: CHG-049
 Title: Correct Manifest-Owned Implementation Folder Placement
-Version: 0.2.0
+Version: 0.2.1
 Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ARCH-MANIFEST-001, CHG-036
-Referenced By: None identified
+Referenced By: AR-REP-001
 Last Updated: 2026-08-09
 Change Lifecycle State: Draft
 ```
@@ -115,3 +115,4 @@ The initial Draft overstated ARCH-MANIFEST-001 by treating `db/`, `openapi/`, `s
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-09 | Initial Draft repository-structure correction. | Chief Architect / Engineering Owner | CHG-049 |
 | 0.2.0 | 2026-08-09 | Revision Required addressed: narrowed relocation scope to Manifest-owned Source, Scripts, and Tests; adopted established directory names; added GOV-004 qualification, disputed-surface assessment, rollback, link-preservation, and branch-coordination controls. | Chief Architect / Engineering Owner | CHG-049 |
+| 0.2.1 | 2026-08-09 | Added AR-REP-001 as the required Focused Architecture Review consumer. | Chief Architect / Engineering Owner | CHG-049 |
