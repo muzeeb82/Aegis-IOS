@@ -8,7 +8,7 @@ Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Informational change record outside the normative authority hierarchy
-Depends On: GOV-002, GOV-003, CHG-003, CHG-005, ARCH-MANIFEST-001, RRC-001
+Depends On: GOV-002, GOV-003, ARCH-MANIFEST-001
 Referenced By: RRC-001
 Last Updated: 2026-08-08
 ```
@@ -103,3 +103,4 @@ Closure approves ARCH-MANIFEST-001 v1.0.0. It does not execute RRC-001, activate
 |---|---|---|---|---|
 | 1.0.0 | 2026-08-08 | Initial Minor change through Approved and Implemented, validating and approving ARCH-MANIFEST-001. | Chief Architect / Product Owner | CHG-006 |
 | 1.0.0 | 2026-08-08 | Recorded executed validation, Passed result, and closure. | Chief Architect / Product Owner | CHG-006 |
+| 1.0.0 | 2026-08-08 | Removed CHG-003, CHG-005, and RRC-001 from `Depends On` under CHG-007: this record inspected ARCH-MANIFEST-001 directly rather than relying operatively on CHG-003/CHG-005's text, and RRC-001 depends on this Closed record as evidence, not the reverse. No substantive content or Closed outcome changed; CHG-003, CHG-005, and RRC-001 remain truthfully described in this record's body. | Chief Architect / Product Owner | CHG-007 |

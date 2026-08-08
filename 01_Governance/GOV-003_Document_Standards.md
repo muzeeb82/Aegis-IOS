@@ -13,7 +13,7 @@ Authority Level: Level 1
 Depends On: CONST-001, GOV-001, GOV-002, ADR-002, ADR-003
 Referenced By: ADR-004, ADR-005, ARCH-MANIFEST-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, GOV-004, RB-GOV-004-001, RFC-001, RRC-001, SPEC-001, STD-001
 Last Updated: 2026-08-08
-Change ID: CHG-002
+Change ID: CHG-008
 ```
 
 ---
@@ -273,6 +273,21 @@ Numeric portions shall use at least three digits unless an approved artifact-fam
 A prefix shall identify the governed artifact family or registry category.
 
 A new prefix shall not be created when an existing governed prefix accurately covers the artifact.
+
+### 6.3.1 Registered Delivery Artifact-Family Prefixes
+
+The following prefixes are registered for the delivery artifact families they identify. Each family reuses this document's common metadata, identity, version, status, traceability, validation, and revision-history rules; registration does not create a new GOV-001 classification or authority level.
+
+| Prefix | Artifact family | Default classification |
+|---|---|---|
+| `FRM` | Governed framework | Normative unless explicitly illustrative |
+| `STD` | Standard | Normative |
+| `PB` | Playbook | Normative unless explicitly illustrative |
+| `EX` | Worked example | Informational |
+| `TRN` | Training artifact | Informational |
+| `IMP` | Implementation/test/release plan | Informational unless an approved profile states otherwise |
+
+`RFC` and `ADR` are governed by GOV-004 §18–§22 and §23–§26 respectively, not by this table. `AR` (Architecture Review) is established by existing precedent (AR-GOV-004-001) rather than by a table entry, consistent with how `ADR` was established by ADR-002/ADR-003 before GOV-004 formalized it.
 
 ### 6.4 Stability
 
@@ -1447,6 +1462,7 @@ Before GOV-003 is approved or revised, verify that:
 | 1.0.0 | 2026-08-07 | Initial approved GOV-003 — Document Standards. | Chief Architect / Product Owner | Not applicable — initial approval preceded CHG-002 |
 | 1.1.0 | 2026-08-07 | Adds governed artifact-family-specific status profiles while preserving the common maturity vocabulary and GOV-002 ownership of Change Record lifecycle states. | Chief Architect / Product Owner | CHG-002 |
 | 1.1.0 | 2026-08-08 | Added verified direct-consumer traceability metadata under CHG-010; no document-standard rule or authority change. | Chief Architect / Product Owner | CHG-010 |
+| 1.1.0 | 2026-08-08 | Registered the `FRM`, `STD`, `PB`, `EX`, `TRN`, and `IMP` delivery artifact-family prefixes in new §6.3.1 under CHG-008. `RFC`, `ADR`, and `AR` remain governed by GOV-004 and existing precedent, not by this table. No other rule, authority, or classification changed. | Chief Architect / Product Owner | CHG-008 |
 
 ---
 
