@@ -23,6 +23,7 @@ out/
 # Local configuration and temporary files
 .env
 .env.*
+!.env.example
 tmp/
 temp/
 *.bak

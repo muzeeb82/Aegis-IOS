@@ -5,10 +5,30 @@ on:
   push:
     branches: [master]
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Validate repository
         run: sh scripts/validate_repository.sh
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install implementation tooling
+        run: pnpm install --frozen-lockfile
+      - name: Validate I0 foundation
+        run: pnpm check
+      - name: Audit locked dependencies
+        run: pnpm audit

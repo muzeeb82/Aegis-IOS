@@ -1,0 +1,12 @@
+openapi: 3.1.1
+info:
+  title: Aegis IOS API
+  version: 0.0.0
+  description: I0 contract scaffold only. No product operations are defined in this increment.
+  license:
+    name: Proprietary
+    url: https://github.com/muzeeb82/Aegis-IOS/blob/master/LICENSE
+servers:
+  - url: http://localhost:3000
+    description: Local development only
+paths: {}
