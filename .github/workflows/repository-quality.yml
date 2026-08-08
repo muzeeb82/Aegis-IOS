@@ -11,6 +11,20 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: aegis_ios
+          POSTGRES_USER: aegis_ios
+          POSTGRES_PASSWORD: ci-local-only
+        options: >-
+          --health-cmd "pg_isready -U aegis_ios -d aegis_ios"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
     steps:
       - uses: actions/checkout@v5
         with:
@@ -28,7 +42,15 @@ jobs:
           cache: pnpm
       - name: Install implementation tooling
         run: pnpm install --frozen-lockfile
-      - name: Validate I0 foundation
+      - name: Validate migrations against PostgreSQL
+        env:
+          DATABASE_URL: postgresql://aegis_ios:ci-local-only@localhost:5432/aegis_ios
+        run: |
+          pnpm migration:apply
+          pnpm migration:status
+          pnpm i1:persistence:check
+          pnpm i1:recovery:check
+      - name: Validate implementation foundation
         run: pnpm check
       - name: Audit locked dependencies
         run: pnpm audit

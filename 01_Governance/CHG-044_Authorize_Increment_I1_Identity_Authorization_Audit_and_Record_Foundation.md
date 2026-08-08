@@ -3,15 +3,15 @@
 ```text
 Document ID: CHG-044
 Title: Authorize Increment I1 Identity, Authorization, Audit, and Record Foundation
-Version: 1.0.0
-Status: Approved — Pending Implementation
+Version: 1.1.0
+Status: Closed
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, ADR-006, SPEC-001, SPEC-002, SPEC-004, SPEC-008, STD-001, IMP-001, CHG-036
-Referenced By: None identified
+Referenced By: EVD-I1-001
 Last Updated: 2026-08-08
-Change Lifecycle State: Approved — Pending Implementation
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
@@ -93,3 +93,22 @@ Authorized scope is exactly §2, subject to the explicit boundaries in §3 and e
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Draft proposing a bounded I1 identity, authorization, audit, and record-foundation increment derived from the approved implementation plan and specifications. | Chief Architect / Engineering Owner | CHG-044 |
 | 1.0.0 | 2026-08-08 | Review passed after direct cross-check against the approved architecture, stack, specification, validation, and implementation-plan boundaries. Added bounded I1 threat-model evidence as a required control; approved the exact scope for implementation. | Chief Architect / Product Owner | CHG-044 |
+| 1.1.0 | 2026-08-08 | Recorded implementation, successful external review, executed validation evidence EVD-I1-001, and closure after successful CI for commit 6065202. | Chief Architect / Engineering Owner | CHG-044 |
+
+## 9. Implementation Activity
+
+Implementation Result: Completed.
+
+The implementation is contained in commits `2c161f2`, `0bf00b8`, and `6065202`. It adds provider-neutral identity interfaces; scope-, sensitivity-, lifecycle-, and separation-of-duty-aware deny-by-default authorization; tamper-evident audit chaining; additive PostgreSQL storage for the I1 identity aggregates; synthetic persistence and rollback validation; CI migration checks; and bounded threat-model/recovery documentation. No excluded product capability or live-provider scope entered the implementation.
+
+## 10. Validation Activity
+
+Validation Result: Passed.
+
+EVD-I1-001 records the actual result for commit `606520200e22b07d491ad66bf91a5c573ec1791a`. GitHub Actions run 31271079640 passed all repository, secret, dependency, migration, synthetic persistence, synthetic rollback, formatting, lint, type, unit, contract, and evidence-schema checks. The external review passed after verifying the final commit against CHG-044 §§2, 3, and 5. Its earlier findings on authorization constraints, test coverage, rollback execution, and evidence sequencing were corrected before this validation result.
+
+## 11. Closure Activity
+
+Closure Result: Closed.
+
+The approved I1 scope was implemented and validated with synthetic data only. Required evidence is retained as EVD-I1-001 and CI run 31271079640. The external reviewer confirmed the final implementation passes the authorized scope. Production backup/recovery, live identity-provider integration, user-facing sign-in, product workflows, and release controls remain explicitly deferred to later governed work.
