@@ -3,15 +3,15 @@
 ```text
 Document ID: CHG-046
 Title: Record CHG-045 Approval Provenance
-Version: 0.1.0
-Status: Draft — Pending Review
+Version: 1.0.0
+Status: Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, CHG-045
 Referenced By: None identified
-Last Updated: 2026-08-08
-Change Lifecycle State: Draft
+Last Updated: 2026-08-09
+Change Lifecycle State: Closed
 ```
 
 ## 1. Change Record
@@ -71,11 +71,15 @@ Subject to Minor review and approval, amend only CHG-045 as follows:
 
 ## 7. Review Activity
 
-Review Result: Pending.
+Review Result: Passed.
+
+Independent review verified the actual PR #7 diff. The review confirmed that CHG-046 initially added only this record; the session-source refinement correctly labels the ChatGPT project session for the authorization sequence and the Codex project session for the direct confirmation. CHG-045 and all I2 implementation files remained untouched during review.
 
 ## 8. Approval Activity
 
-Approval Result: Pending. No correction is authorized by this Draft.
+Approval Result: Approved.
+
+Decision Authority: Chief Architect / Product Owner. Approval Date: 2026-08-09. Approval Evidence: the Decision Authority explicitly stated `I approve CHG-046.` The authorized scope is exactly §4, subject to §5 and §6.
 
 ## 9. Revision History
 
@@ -83,3 +87,22 @@ Approval Result: Pending. No correction is authorized by this Draft.
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Draft to record the Decision Authority's actual CHG-045 approval provenance without rewriting the original Approval Activity. | Chief Architect / Product Owner | CHG-046 |
 | 0.1.1 | 2026-08-09 | Clarified the ChatGPT and Codex project-session sources for each approval-evidence item and proposed provenance text. | Chief Architect / Product Owner | CHG-046 |
+| 1.0.0 | 2026-08-09 | Review passed; approved, implemented, validated, and closed the bounded CHG-045 approval-provenance correction. | Chief Architect / Product Owner | CHG-046 |
+
+## 10. Implementation Activity
+
+Implementation Result: Completed.
+
+CHG-045 received only the approved header traceability correction (`Referenced By: CHG-046`) and append-only §§9–10. No I2 source, migration, test, CI, or evidence file changed.
+
+## 11. Validation Activity
+
+Validation Result: Passed.
+
+Validated that CHG-045 §§1–8 are unchanged from the approved baseline; the new §9 accurately records the two-session approval evidence without creating, backdating, or replacing the approval; and the diff contains only CHG-045 and CHG-046. `git diff --check` passed.
+
+## 12. Closure Activity
+
+Closure Result: Closed.
+
+The approved provenance correction is implemented and validated. CHG-045's existing I2 authorization remains unchanged and may be used according to its existing scope, boundaries, and evidence requirements.

@@ -3,14 +3,14 @@
 ```text
 Document ID: CHG-045
 Title: Authorize Increment I2 Decision, Evidence, and Traceability Lifecycle
-Version: 1.0.0
+Version: 1.0.1
 Status: Approved — Pending Implementation
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, ADR-006, SPEC-001, SPEC-002, SPEC-004, SPEC-008, STD-001, IMP-001, CHG-044
-Referenced By: None identified
-Last Updated: 2026-08-08
+Referenced By: CHG-046
+Last Updated: 2026-08-09
 Change Lifecycle State: Approved — Pending Implementation
 ```
 
@@ -74,3 +74,13 @@ Authorized scope is exactly §2, subject to §3 boundaries and §5 evidence. Val
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial bounded I2 authorization Draft derived from the approved implementation plan and specifications. | Chief Architect / Engineering Owner | CHG-045 |
 | 1.0.0 | 2026-08-08 | Review passed; approved the bounded I2 scope for implementation subject to its explicit boundaries and evidence requirements. | Chief Architect / Product Owner | CHG-045 |
+
+## 9. Approval Provenance Correction
+
+This section is added under CHG-046 to preserve approval provenance. CHG-045's Approval Activity (§7) records the approved scope but did not identify the Decision Authority's actual approval instruction. In the ChatGPT project session, the Chief Architect / Product Owner explicitly authorized I2 to proceed after being told that formal CHG-045 approval was the sole remaining prerequisite; in the Codex project session, the Chief Architect / Product Owner later directly confirmed that the approval was theirs. This correction records that evidence; it does not create, backdate, or replace the original approval.
+
+## 10. Revision History
+
+| Version | Date | Change | Author | Change ID |
+|---|---|---|---|---|
+| 1.0.1 | 2026-08-09 | Added the append-only approval-provenance correction under CHG-046; §§1–8 remain unchanged. | Chief Architect / Product Owner | CHG-046 |
