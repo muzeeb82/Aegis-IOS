@@ -8,7 +8,7 @@ Status: Approved — Pending Implementation
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
-Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-007, SPEC-008, STD-001, IMP-001
+Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, ADR-006, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-007, SPEC-008, STD-001, IMP-001, CHG-037
 Referenced By: None identified
 Last Updated: 2026-08-08
 Change Lifecycle State: Approved — Pending Implementation
