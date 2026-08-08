@@ -70,3 +70,4 @@ Production release requires approved architecture and specifications, passing ma
 | 0.1.0 | 2026-08-08 | Initial validation and conformance Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` from "None identified" to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer for extension-package conformance evidence. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-042: this specification's approval transition (Draft → Approved, ADR-004 added as a direct dependency) was made under CHG-034 but never received a revision-history row. The executable-validation distinction is unchanged; no conformance gate is treated as executed. | Chief Architect / Product Owner | CHG-042 |

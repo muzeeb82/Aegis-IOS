@@ -82,3 +82,4 @@ Every package shall retain traceability to its owner, version, compatibility dec
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Draft defining the dedicated extension-package contract selected by CHG-018. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-042: this specification's approval transition (Draft → Approved, ADR-004 added as a direct dependency) was made under CHG-034 but never received a revision-history row. Extension-package boundaries are unchanged. | Chief Architect / Product Owner | CHG-042 |

@@ -58,3 +58,4 @@ Deployment requires approved change, artifact identity, schema compatibility, pr
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial runtime, reliability, observability, and deployment Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added PB-001, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |
+| 1.0.0 | 2026-08-08 | Retrospectively recorded under CHG-042: this specification's approval transition (Draft → Approved, ADR-004 added as a direct dependency) was made under CHG-034 but never received a revision-history row. Runtime, reliability, observability, and deployment provisions are unchanged; evidence-dependent service objectives remain future evidence. | Chief Architect / Product Owner | CHG-042 |
