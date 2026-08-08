@@ -8,8 +8,8 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "format": "prettier --write package.json tsconfig.json eslint.config.mjs .prettierrc.json redocly.yaml docker-compose.yml src tests openapi db schemas/evidence-record.schema.json scripts/migrate.mjs scripts/validate-evidence-schema.mjs scripts/validate-i1-persistence.mjs scripts/validate-i1-recovery.mjs scripts/lib",
-    "format:check": "prettier --check package.json tsconfig.json eslint.config.mjs .prettierrc.json redocly.yaml docker-compose.yml src tests openapi db schemas/evidence-record.schema.json scripts/migrate.mjs scripts/validate-evidence-schema.mjs scripts/validate-i1-persistence.mjs scripts/validate-i1-recovery.mjs scripts/lib",
+    "format": "prettier --write package.json tsconfig.json eslint.config.mjs .prettierrc.json redocly.yaml docker-compose.yml src tests openapi db schemas/evidence-record.schema.json scripts/migrate.mjs scripts/validate-evidence-schema.mjs scripts/validate-i1-persistence.mjs scripts/validate-i1-recovery.mjs scripts/validate-i2-persistence.mjs scripts/validate-i2-recovery.mjs scripts/validate-i2-reconciliation.mjs scripts/lib",
+    "format:check": "prettier --check package.json tsconfig.json eslint.config.mjs .prettierrc.json redocly.yaml docker-compose.yml src tests openapi db schemas/evidence-record.schema.json scripts/migrate.mjs scripts/validate-evidence-schema.mjs scripts/validate-i1-persistence.mjs scripts/validate-i1-recovery.mjs scripts/validate-i2-persistence.mjs scripts/validate-i2-recovery.mjs scripts/validate-i2-reconciliation.mjs scripts/lib",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -20,6 +20,9 @@
     "migration:apply": "node scripts/migrate.mjs --apply",
     "i1:persistence:check": "node scripts/validate-i1-persistence.mjs",
     "i1:recovery:check": "node scripts/validate-i1-recovery.mjs",
+    "i2:persistence:check": "node scripts/validate-i2-persistence.mjs",
+    "i2:recovery:check": "node scripts/validate-i2-recovery.mjs",
+    "i2:reconciliation:check": "node scripts/validate-i2-reconciliation.mjs",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm contract:check && pnpm evidence:schema:check"
   },
   "devDependencies": {
