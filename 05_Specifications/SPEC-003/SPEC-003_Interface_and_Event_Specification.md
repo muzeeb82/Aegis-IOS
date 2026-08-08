@@ -3,15 +3,15 @@
 ```text
 Document ID: SPEC-003
 Title: Interface and Event Specification
-Version: 0.1.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PRD-001, SPEC-001, SPEC-002, AR-SYS-001
-Referenced By: SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, AR-PKG-001, RRC-001
+Depends On: PRD-001, ADR-004, SPEC-001, SPEC-002, AR-SYS-001
+Referenced By: CHG-031, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-031
 ```
 
 ## 1. Purpose
@@ -67,3 +67,4 @@ Backward-compatible additions may be Minor; removing, renaming, narrowing, or ch
 | 0.1.0 | 2026-08-08 | Initial interface and event-contract Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added SPEC-004, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer for extension-package interface and compatibility behavior. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Under CHG-031: approved the existing interface and event contract; added ADR-004 as a direct dependency and recorded approval provenance without changing behavior or runtime validation gates. | Chief Architect / Product Owner | CHG-031 |
