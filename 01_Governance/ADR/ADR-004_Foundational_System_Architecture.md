@@ -3,12 +3,12 @@
 ```text
 Document ID: ADR-004
 Title: Foundational System Architecture
-Version: 1.0.0
+Version: 1.0.1
 Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 3
-Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-003, PRD-001, AR-SYS-001, RFC-001
+Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-003, PRD-001, AR-SYS-001, AR-SYS-003, RFC-001
 Referenced By: SPEC-001 through SPEC-008 (proposed)
 Last Updated: 2026-08-08
 Change ID: CHG-028
@@ -55,7 +55,7 @@ The proposed modular core is preferred because it provides explicit domain owner
 | Security and privacy | Material. Deny-by-default authorization, audit evidence, protected-boundary controls, and a later security specification are required before implementation. |
 | Operations and reliability | Material. Observability, recoverability, and operational evidence require detailed specification and validation before implementation. |
 | Migration and compatibility | No immediate migration because no implementation exists. Future extraction or interface-version changes require separate evidence and governed decisions. |
-| Validation | Material. AR-SYS-001 is `Review Confirmed`; architecture implementation validation remains incomplete and is required before release. |
+| Validation | Material. As approved on 2026-08-08, this row cited AR-SYS-001 as `Review Confirmed`. AR-SYS-001 was subsequently found to rest on an incomplete GOV-004 §12 impact analysis and is now `Superseded` (CHG-039). Current decision-readiness evidence is AR-SYS-003, `Review Confirmed` and independently revalidated per CHG-039 §21; CHG-040 governs the corrective implementation and traceability correction that produced AR-SYS-003, and is not itself an independent revalidation of its substantive content. Architecture implementation validation remains incomplete and is required before release. |
 
 ## 7. Affected Artifacts and Owners
 
@@ -63,7 +63,8 @@ The proposed modular core is preferred because it provides explicit domain owner
 |---|---|---|
 | PRD-001 | Chief Architect / Product Owner | Approved product requirements consumed; not amended by this ADR. |
 | ADR-003 | Chief Architect / Product Owner | Approved authority-boundary decision consumed by this ADR. |
-| AR-SYS-001 | Chief Architect / Product Owner | Architecture review input; `Review Confirmed`. |
+| AR-SYS-001 | Chief Architect / Product Owner | Original architecture review input at approval time; subsequently found incomplete and `Superseded` (CHG-039). Preserved here for historical accuracy of what this ADR's approval originally cited. |
+| AR-SYS-003 | Chief Architect / Product Owner | Current decision-readiness evidence; `Review Confirmed`, independently revalidated per CHG-039 §21. CHG-040 governs the corrective implementation and traceability correction that produced this artifact. This correction does not reopen or re-argue this ADR's architecture Decision. |
 | RFC-001 | Chief Architect / Product Owner | Consultation record and resulting-ADR input; `Approved for Decision`. |
 | SPEC-001 through SPEC-009 | Chief Architect / Product Owner | Downstream Draft specifications; no approval or implementation authorized. |
 | FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001 | Chief Architect / Product Owner | Downstream Draft delivery artifacts; no approval or implementation authorized. |
@@ -76,6 +77,7 @@ Authority Basis: GOV-001 authority model; GOV-004 §§23–28; ADR-003 Architect
 Decision Date: 2026-08-08
 Related Change ID: CHG-028
 Related Architecture Review: AR-SYS-001
+Current Decision-Readiness Evidence: AR-SYS-003 (Review Confirmed, independently revalidated per CHG-039 §21; supersedes AR-SYS-001 and AR-SYS-002; CHG-040 governs the corrective implementation and traceability correction)
 Related RFC: RFC-001
 Supersession Relationships: None. This ADR neither supersedes nor is superseded by another Approved ADR.
 ```
@@ -88,17 +90,20 @@ No implementation is authorized by this ADR. Before implementation, an approved 
 
 No material dissent is recorded. The RFC consultation resolves the domain-responsibility interpretation, and AR-SYS-001 is Review Confirmed. No independent reviewer is currently designated; the limitation and compensating reviews are preserved in RFC-001 and CHG-027 and were considered by the Decision Authority before approval.
 
+**Evidence-reference update (CHG-041):** The Architecture Review cited above, AR-SYS-001, was subsequently found, on independent review documented in CHG-039, to rest on an incomplete GOV-004 §12 impact analysis inherited via CHG-027's overclaim, and is now `Superseded`. A distinct successor review, AR-SYS-003, independently re-verified a complete twenty-seven-category impact analysis and reached `Review Confirmed`; CHG-039 §21 records the independent revalidation confirming this outcome, and CHG-040 is the separate record that governed the corrective implementation and traceability corrections that produced AR-SYS-003. This update does not identify new dissent, does not change RFC-001's consultation result, and does not reopen or re-argue this ADR's Decision (§2) or Rationale (§5).
+
 ## 11. Decision Status
 
-**Approved.** This ADR establishes the foundational architecture decision effective 2026-08-08. It governs architecture within its stated scope, but it does not authorize implementation; each implementation increment requires a separate approved GOV-002 change record.
+**Approved.** This ADR establishes the foundational architecture decision effective 2026-08-08. It governs architecture within its stated scope, but it does not authorize implementation; each implementation increment requires a separate approved GOV-002 change record. This evidence-reference correction (CHG-041) does not alter, reopen, or re-argue this Approved decision.
 
 ## 12. Validation Checklist
 
-- [x] AR-SYS-001 is Review Confirmed.
+- [x] As approved on 2026-08-08, AR-SYS-001 was Review Confirmed. AR-SYS-001 is now Superseded (CHG-039); current decision-readiness evidence is AR-SYS-003, Review Confirmed and independently revalidated per CHG-039 §21 (CHG-040 governs the corrective implementation and traceability correction, not itself an independent revalidation) — see §10.
 - [x] RFC-001 consultation is complete and the RFC is Approved for Decision.
 - [x] Decision authority explicitly approves this exact scope.
 - [x] Consequences and downstream updates are accepted as Draft design obligations.
 - [x] Related GOV-002 change is required and must be approved before implementation.
+- [x] Evidence-reference correction: this ADR's citation of its Architecture Review is updated to reflect AR-SYS-001's supersession and AR-SYS-003's current Review Confirmed status (CHG-041); the architecture Decision (§2) and Rationale (§5) are unchanged.
 
 ## 13. Revision History
 
@@ -107,3 +112,4 @@ No material dissent is recorded. The RFC consultation resolves the domain-respon
 | 0.1.0 | 2026-08-08 | Initial proposed foundational architecture decision. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Under CHG-021: added ADR-003 as a direct dependency and completed Draft decision-readiness sections for the architecture question, rationale, impact analysis, affected artifacts, authority basis, implementation/validation implications, and readiness limitations. Draft status retained; no architecture decision or implementation authorization recorded. | Chief Architect / Product Owner | CHG-021 |
 | 1.0.0 | 2026-08-08 | Under CHG-028: approved the existing governed modular-core decision after AR-SYS-001 Review Confirmation and RFC-001 approval for decision. No implementation authorization, vendor selection, or product-requirement change. | Chief Architect / Product Owner | CHG-028 |
+| 1.0.1 | 2026-08-08 | Under CHG-041: corrected six stale evidentiary references to AR-SYS-001 (now `Superseded`, CHG-039) to instead cite AR-SYS-003 (`Review Confirmed`, independently revalidated per CHG-039 §21; CHG-040 governs the corrective implementation and traceability correction) as current decision-readiness evidence. Edits confined to §6 Validation row, §7 Affected Artifacts table, §8 Decision Administration, §10 Dissent and Readiness Limitations, §11 Decision Status, §12 Validation Checklist, and header `Depends On`. No change to §§1–5 (Architecture Question, Decision, Context, Alternatives, Rationale) or to §9 implementation authorization; this ADR's architecture Decision is not reopened, re-argued, or reversed. | Chief Architect / Product Owner | CHG-041 |

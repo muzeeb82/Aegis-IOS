@@ -4,7 +4,7 @@
 Document ID: AR-SYS-001
 Title: Aegis IOS System Architecture Review
 Version: 0.1.0
-Status: Review Confirmed
+Status: Superseded
 Owner: Chief Architect / Product Owner
 Classification: Informational — Architecture Review
 Authority Level: Not Applicable — Informational review outside the normative authority hierarchy
@@ -13,6 +13,8 @@ Referenced By: ADR-004, CHG-013, CHG-018, CHG-020, CHG-021, RFC-001, RRC-001, AR
 Last Updated: 2026-08-08
 Change ID: CHG-027
 ```
+
+**Superseded by AR-SYS-002 — preserved in full below for historical accuracy. This artifact's `Review Confirmed` disposition (§16) rested on an impact analysis that GOV-004 §12 required to be complete and was not (see AR-SYS-002 §10 and CHG-039). No word of §§1–19 below is otherwise changed.**
 
 ## 1. Objective
 
@@ -426,3 +428,6 @@ The final transition is `Revision Required → In Review → Review Confirmed`. 
 | 0.1.0 | 2026-08-08 | Executed the GOV-004 §14.1 `Draft → In Review → Revision Required` transition under CHG-020. Updated Status and §16 Disposition with the truthful review outcome; full evidence recorded in CHG-020 §14. No other section changed. | Chief Architect / Product Owner | CHG-020 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer of the extension and compatibility review context under CHG-018; no review conclusion changed. | Chief Architect / Product Owner | CHG-018 |
 | 0.2.0 | 2026-08-08 | Under CHG-027: added explicit affected-owner, evidence, dissent, and Usability-impact representations; re-executed review and transitioned `Revision Required → In Review → Review Confirmed` without changing the architecture proposal. | Chief Architect / Product Owner | CHG-027 |
+| 0.2.0 | 2026-08-08 | Under CHG-039: executed the GOV-004 §14.1 `Review Confirmed → Superseded` transition. CHG-027's `Review Confirmed` disposition rested on §18's `Impact analysis covers every GOV-004 §12 category` item, which was checked without eleven of twenty-seven categories having a §10 row or recorded non-applicability conclusion. AR-SYS-002 is the distinct successor Architecture Review carrying the complete impact analysis forward; no other section of this document was changed. | Chief Architect / Product Owner | CHG-039 |
+| 0.2.0 | 2026-08-08 | Scope correction under CHG-039: the prior CHG-039 edit also changed the header `Change ID` field from `CHG-027` to `CHG-039`. CHG-039's approved scope authorized exactly three edits — Status field, one superseding pointer, one revision-history row — and did not authorize the `Change ID` field. That field is reverted to `CHG-027` here. This row is itself the only content change made by this correction; see CHG-039 for the full violation-and-correction record. | Chief Architect / Product Owner | CHG-039 |
+| 0.2.0 | 2026-08-08 | Under CHG-040: reviewed and approves the immediately preceding revision-history row (the `Change ID` violation-and-revert correction), which CHG-039's own corrective implementation had added without the renewed Review and Approval Activity GOV-002 §11.5 requires. No other content changed; `Referenced By` is not touched by this record. | Chief Architect / Product Owner | CHG-040 |

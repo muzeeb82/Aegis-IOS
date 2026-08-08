@@ -8,8 +8,8 @@ Status: Validated — Phase C4 Baseline Closed
 Owner: Chief Architect / Product Owner
 Classification: Informational — Baseline readiness checklist
 Authority Level: Not Applicable — Informational checklist outside the normative authority hierarchy
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, ADR-004, ADR-005, RB-GOV-004-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, RFC-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, CHG-013, CHG-014, CHG-015, CHG-016, CHG-017, CHG-018, CHG-019, CHG-020, CHG-021, CHG-022, CHG-023, CHG-024, CHG-025, CHG-026, ARCH-MANIFEST-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
-Referenced By: None identified
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, PI-001, ADR-002, ADR-003, ADR-004, ADR-005, RB-GOV-004-001, AR-GOV-004-001, AR-PKG-001, AR-SYS-001, RFC-001, CHG-001, CHG-002, CHG-003, CHG-004, CHG-005, CHG-006, CHG-007, CHG-008, CHG-009, CHG-010, CHG-011, CHG-012, CHG-013, CHG-014, CHG-015, CHG-016, CHG-017, CHG-018, CHG-019, CHG-020, CHG-021, CHG-022, CHG-023, CHG-024, CHG-025, CHG-026, CHG-038, ARCH-MANIFEST-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
+Referenced By: CHG-012, CHG-025, CHG-026, CHG-038
 Last Updated: 2026-08-08
 Change ID: CHG-003
 ```
@@ -64,7 +64,7 @@ This document defines readiness criteria. Unchecked boxes do not indicate failur
 
 ### Design-package artifacts
 
-- [x] AR-PKG-001 remains an Informational `Review Confirmed` record subject to its §12 corrective findings and is not represented as an architecture or product approval. ADR-004, RFC-001, AR-SYS-001, SPEC-001 through SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, and IMP-001 remain in an allowed pre-approval state (Draft, In Review, Revision Required, or Reserved) and none is represented as Approved or governing.
+- [x] As assessed at the 2026-08-08 Phase C4 closure baseline (the repository state existing at the commit that recorded this executed §4 result), AR-PKG-001 was an Informational `Review Confirmed` record subject to its §12 corrective findings and was not represented as an architecture or product approval; ADR-004, RFC-001, AR-SYS-001, SPEC-001 through SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, and IMP-001 remained in an allowed pre-approval state (Draft, In Review, Revision Required, or Reserved) and none was represented as Approved or governing at that baseline. This criterion is a closure-baseline snapshot, not a claim about current live status. Later change records (including CHG-021, CHG-027 through CHG-037, and any subsequent record) that approve a named artifact do not retroactively alter this checked criterion and do not reopen Phase C4 closure evidence; the current live status of any named artifact should be verified against that artifact's own header, not against this checklist.
 - [x] CHG-008 is present with a Passed and Closed record.
 - [x] CHG-009 and CHG-010 are present with Passed and Closed records.
 - [x] CHG-011 is present with a Passed and Closed record.
@@ -114,8 +114,9 @@ Release Tag: v5.0.0-governance-baseline — Approved annotated tag targeting the
 | 0.1.0 | 2026-08-08 | Under CHG-025: added CHG-013 through CHG-025 and SPEC-009 to `Depends On`, extended the Draft design-package criterion through SPEC-009, and added the closed-record criterion for CHG-013 through CHG-024. RRC-001 remains Draft and Not Executed; no criterion is marked Passed by this edit. | Chief Architect / Product Owner | CHG-025 |
 | 0.1.0 | 2026-08-08 | Under CHG-026: corrected the design-package lifecycle criterion to distinguish AR-PKG-001's Informational review state and the allowed pre-approval states of other Design artifacts; extended dependency and closure representation through CHG-026. RRC-001 remains Draft and Not Executed; no criterion is marked Passed by this edit. | Chief Architect / Product Owner | CHG-026 |
 | 1.0.0 | 2026-08-08 | Executed every mandatory Phase C4 readiness criterion on clean local `master`; all passed. Identified the final master closure commit as the release target and approved the annotated `v5.0.0-governance-baseline` tag. | Chief Architect / Product Owner | CHG-003 |
+| 1.0.0 | 2026-08-08 | Under CHG-038: date-bound the §2 design-package artifacts criterion to the 2026-08-08 closure baseline without unchecking it; corrected `Referenced By` from "None identified" to the verified direct-consumer inventory `CHG-012, CHG-025, CHG-026, CHG-038`; corrected the line-118 footer, which had contradicted this document's own header and §4 Execution Record; added CHG-038 to `Depends On`. No other criterion, execution record, or historical section changed. | Chief Architect / Product Owner | CHG-038 |
 
-**RRC-001 Status:** **Draft — Pending Validation**
+**RRC-001 Status:** **Validated — Phase C4 Baseline Closed** (this line previously read "Draft — Pending Validation," a leftover pre-execution footer never updated to match the header and §4 Execution Record; corrected under CHG-038).
 
 ## 6. Proposed Phase C4 Execution Package
 
