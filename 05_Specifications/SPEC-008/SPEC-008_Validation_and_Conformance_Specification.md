@@ -9,7 +9,7 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
 Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, AR-SYS-001
-Referenced By: None identified
+Referenced By: STD-001, IMP-001, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
 ```
@@ -68,3 +68,4 @@ Production release requires approved architecture and specifications, passing ma
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial validation and conformance Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Corrected `Referenced By` from "None identified" to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |

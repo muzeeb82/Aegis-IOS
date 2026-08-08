@@ -9,8 +9,8 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 2
 Depends On: CONST-001, GOV-001, ADR-002
-Referenced By: PRD, PI-001
-Last Updated: 2026-08-07
+Referenced By: CHG-013, GOV-002, GOV-004, RRC-001, AR-PKG-001, AR-SYS-001, PRD-001, PI-001, ARCH-MANIFEST-001
+Last Updated: 2026-08-08
 ```
 
 ---
@@ -253,6 +253,7 @@ Before approval or revision of this Charter, verify that:
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 1.0.0 | 2026-08-07 | Phase C2.1 alignment. References CONST-001 and GOV-001, preserves Charter ownership of Project Objectives, Project Scope, and Project Success Criteria, and removes duplicated ownership of foundational and product-level concepts. Before approval, removed SPEC-001 from the direct `Referenced By` relationship and clarified the Project Mandate/Project Scope boundary without changing the approved scope inventory. | Chief Architect / Product Owner |
+| 1.0.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1, including the stable identifier `PRD-001` in place of the non-canonical token `PRD`. | Chief Architect / Product Owner |
 
 ---
 

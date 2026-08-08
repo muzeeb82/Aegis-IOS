@@ -9,7 +9,7 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
 Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, AR-SYS-001
-Referenced By: SPEC-005, SPEC-006, SPEC-007, SPEC-008 (all proposed)
+Referenced By: CHG-016, SPEC-005, SPEC-006, SPEC-007, SPEC-008, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
 Change ID: Not assigned — unapproved Draft
 ```
@@ -65,3 +65,4 @@ Authentication, authorization changes, denied privileged actions, secret use, pr
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial security, privacy, and access-control Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added CHG-016, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |

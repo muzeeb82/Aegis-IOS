@@ -11,8 +11,8 @@ Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 1
 Depends On: CONST-001, GOV-001, GOV-002, GOV-003, CHARTER-001, PRD-001, RB-GOV-004-001, AR-GOV-004-001, ADR-002, ADR-003
-Referenced By: None identified
-Last Updated: 2026-08-07
+Referenced By: ADR-004, CHG-003, CHG-008, CHG-012, CHG-013, CHG-015, CHG-020, CHG-021, RFC-001, RRC-001, AR-PKG-001, AR-SYS-001, SPEC-001, STD-001, IMP-001, ARCH-MANIFEST-001
+Last Updated: 2026-08-08
 ```
 
 ---
@@ -1425,6 +1425,7 @@ Before GOV-004 is approved or revised, verify that:
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 1.0.0 | 2026-08-07 | Phase C3.3 validation draft. Establishes architecture qualification, review thresholds, Architecture Review/RFC/ADR boundaries, decision authority, status profiles, conformance validation, supersession, emergency handling, and prospective transition from precedent-based architecture governance. | Chief Architect / Product Owner |
+| 1.0.0 | 2026-08-08 | Corrected `Referenced By` from "None identified" to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner |
 
 ---
 

@@ -18,6 +18,14 @@ Change ID: Not assigned — unapproved Draft
 
 Provides a strategy-neutral process for producing traceable investment decisions. It governs process quality, not investment outcomes, security selection, or guaranteed returns.
 
+### 1.1 Applicability
+
+This Framework is eligible for any investment decision requiring structured, evidence-based evaluation and traceable approval under PRD-001 CAP-001 (Investment Decision Management) and CAP-004 (Investment Framework Execution), including asset allocation changes, security selection, portfolio rebalancing, and risk-mitigation actions, regardless of asset class, portfolio, or strategy. This Framework does not define, narrow, or expand PRD-001's Product Capability Scope; it states only which decisions this Framework itself may process. It is not eligible for a decision outside Investment Decision Management as PRD-001 defines it.
+
+### 1.2 Framework-State Applicability
+
+Only an Approved version of this Framework may be applied where an Approved framework is required. A Draft or retired version shall not be applied in that circumstance. An executor shall verify the Framework's Approved status and version at Stage 3 (Identify approved framework version and required evidence) before proceeding; if no Approved version exists, execution shall stop and escalate per PB-001 §2 Stop Conditions.
+
 ## 2. Required Stages
 
 1. Define decision question, owner, authority, scope, horizon, and deadline.
@@ -52,3 +60,4 @@ The framework fails when authority is absent, required evidence lacks provenance
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial strategy-neutral decision-framework Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Added §1.1 Applicability and §1.2 Framework-State Applicability, realizing SPEC-001 §9's eligible-decision-types and Draft/retired-applicability requirements. | Chief Architect / Product Owner | CHG-019 |

@@ -9,8 +9,8 @@ Owner: Product Owner / Chief Architect
 Classification: Normative
 Authority Level: Level 4
 Depends On: CONST-001, GOV-001, CHARTER-001, ADR-003
-Referenced By: SPEC-001, PI-001
-Last Updated: 2026-08-07
+Referenced By: ADR-004, CHG-013, CHG-018, CHG-021, GOV-002, GOV-004, RFC-001, RRC-001, AR-PKG-001, AR-SYS-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, FRM-001, TRN-001, PI-001, ARCH-MANIFEST-001
+Last Updated: 2026-08-08
 ```
 
 ---
@@ -560,6 +560,7 @@ Before approval or revision of this PRD, verify that:
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 1.0.0 | 2026-08-07 | Phase C2.2 alignment. Establishes Product Goals, Product Capability Scope, Functional Requirements, Requirement Acceptance Criteria, and product-specific NFRs within the approved constitutional, governance, project, and architecture boundaries. | Product Owner / Chief Architect |
+| 1.0.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner |
 
 ---
 

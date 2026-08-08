@@ -4,12 +4,12 @@
 Document ID: AR-SYS-001
 Title: Aegis IOS System Architecture Review
 Version: 0.1.0
-Status: Draft (Pending Internal Review)
+Status: Revision Required
 Owner: Chief Architect / Product Owner
 Classification: Informational — Architecture Review
 Authority Level: Not Applicable — Informational review outside the normative authority hierarchy
 Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003
-Referenced By: SPEC-001 (proposed; non-governing while Draft)
+Referenced By: ADR-004, CHG-013, CHG-018, CHG-020, CHG-021, RFC-001, RRC-001, AR-PKG-001, SPEC-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008
 Last Updated: 2026-08-08
 Change ID: Not assigned — design package remains uncommitted and unapproved
 ```
@@ -364,9 +364,11 @@ No unapproved option is presented as selected.
 
 ## 16. Disposition
 
-**Draft — Pending Internal Review.**
+**Revision Required.**
 
-The proposal is suitable for continued design elaboration. It is not Review Confirmed, Approved, implemented, validated, or governing.
+Under CHG-020, this Architecture Review executed the GOV-004 §14.1 `Draft → In Review` transition on 2026-08-08 and was evaluated against GOV-004 §11 (Review Readiness) and §13 (Architecture Review Record required content). The review found this record materially sound in substance — architecture-boundary conformance, alternatives analysis, and domain coverage all held up under evaluation — but structurally incomplete against §13's required-content list: no Dissent section (not even "None recorded"), no dedicated Affected Artifacts and Owners section distinct from the Impact Analysis table, an Evidence basis that is implicit in the narrative rather than an explicit section, and the §10 Impact Analysis table omitting explicit treatment of Usability and several other GOV-004 §12 categories that are addressed elsewhere in this document but not tied into the Impact Analysis section itself. Full findings, review evidence, and the compensating-validation record are in CHG-020 §14.
+
+Per GOV-004 §14.1, this record therefore transitions `In Review → Revision Required` rather than to `Review Confirmed`. It is not Review Confirmed, Approved, implemented, validated, or governing. The proposal remains suitable for continued design elaboration while the identified structural gaps are addressed in a future revision.
 
 ## 17. Decision Path
 
@@ -397,3 +399,5 @@ The proposal is suitable for continued design elaboration. It is not Review Conf
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial complete-system architecture-review Draft for internal design and traceability review. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
+| 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
+| 0.1.0 | 2026-08-08 | Executed the GOV-004 §14.1 `Draft → In Review → Revision Required` transition under CHG-020. Updated Status and §16 Disposition with the truthful review outcome; full evidence recorded in CHG-020 §14. No other section changed. | Chief Architect / Product Owner | CHG-020 |
