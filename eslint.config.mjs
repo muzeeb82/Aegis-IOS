@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -6,5 +7,11 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   {
     ignores: ['dist/', 'coverage/', 'node_modules/'],
+  },
+  {
+    files: ['**/*.{js,mjs,cjs,ts}'],
+    languageOptions: {
+      globals: globals.node,
+    },
   },
 );
