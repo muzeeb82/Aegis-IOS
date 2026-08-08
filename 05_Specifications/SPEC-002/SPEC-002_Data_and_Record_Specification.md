@@ -3,15 +3,15 @@
 ```text
 Document ID: SPEC-002
 Title: Data and Record Specification
-Version: 0.1.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PRD-001, SPEC-001, AR-SYS-001
-Referenced By: SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, AR-PKG-001, RRC-001
+Depends On: PRD-001, ADR-004, SPEC-001, AR-SYS-001
+Referenced By: CHG-030, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-030
 ```
 
 ## 1. Purpose and Scope
@@ -80,3 +80,4 @@ Schema changes shall provide compatibility classification, forward migration, ro
 | 0.1.0 | 2026-08-08 | Initial complete data-contract Draft. | Chief Architect / Product Owner | Not assigned — unapproved Draft |
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added SPEC-004, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer for extension-package data ownership and migration behavior. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Under CHG-030: approved the existing data and record contract; added ADR-004 as a direct dependency and recorded approval provenance without changing data behavior or validation gates. | Chief Architect / Product Owner | CHG-030 |
