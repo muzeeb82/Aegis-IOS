@@ -3,22 +3,22 @@
 ```text
 Document ID: SPEC-001
 Title: Aegis IOS System Specification
-Version: 0.2.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003, AR-SYS-001
-Referenced By: CHG-003, CHG-004, CHG-005, CHG-012, CHG-013, CHG-018, CHG-019, RFC-001, RRC-001, AR-PKG-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
+Depends On: CONST-001, GOV-001, GOV-002, GOV-003, GOV-004, CHARTER-001, PRD-001, ADR-003, ADR-004, AR-SYS-001
+Referenced By: CHG-003, CHG-004, CHG-005, CHG-012, CHG-013, CHG-018, CHG-019, CHG-029, RFC-001, RRC-001, AR-PKG-001, SPEC-002, SPEC-003, SPEC-004, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, FRM-001, STD-001, PB-001, EX-001, TRN-001, IMP-001
 Last Updated: 2026-08-08
-Change ID: CHG-013
+Change ID: CHG-029
 ```
 
 ## 1. Purpose
 
 SPEC-001 defines the system-wide behavioral contract for Aegis IOS. It elaborates PRD-001's approved requirements into implementable system behavior, invariants, workflows, boundaries, and validation conditions.
 
-This Draft relies on the proposed architecture in AR-SYS-001. It is non-governing until the required architecture decisions and this specification are explicitly approved.
+This specification relies on the Review Confirmed architecture review in AR-SYS-001 and the Approved architecture decision in ADR-004. It is authoritative within its Level 5 system-specification scope; detailed specifications elaborate it without contradiction.
 
 ## 2. Scope
 
@@ -352,17 +352,17 @@ Production implementation shall not begin until:
 
 ## 22. Validation Checklist
 
-- [ ] Metadata and structure conform to GOV-003.
-- [ ] No PRD-owned requirement or acceptance criterion is redefined.
-- [ ] Every FR and AC has system behavior and a validation condition.
-- [ ] Every NFR is elaborated without redefining GOV-001 Quality Attributes.
-- [ ] Governing invariants are internally consistent.
-- [ ] Decision, evidence, portfolio, framework, learning, AI, connector, security, and operations boundaries are complete.
-- [ ] Failure, recovery, provenance, authorization, and audit behavior are explicit.
-- [ ] Proposed architecture is not represented as approved.
-- [ ] Vendor choices and unsupported numeric targets remain open.
-- [ ] Downstream specification ownership is non-duplicative.
-- [ ] Implementation entry criteria prevent premature production work.
+- [x] Metadata and structure conform to GOV-003.
+- [x] No PRD-owned requirement or acceptance criterion is redefined.
+- [x] Every FR and AC has system behavior and a validation condition.
+- [x] Every NFR is elaborated without redefining GOV-001 Quality Attributes.
+- [x] Governing invariants are internally consistent.
+- [x] Decision, evidence, portfolio, framework, learning, AI, connector, security, and operations boundaries are complete.
+- [x] Failure, recovery, provenance, authorization, and audit behavior are explicit.
+- [x] Approved architecture is consumed through ADR-004 without extending its scope.
+- [x] Vendor choices and unsupported numeric targets remain open.
+- [x] Downstream specification ownership is non-duplicative.
+- [x] Implementation entry criteria prevent premature production work.
 
 ## 23. Revision History
 
@@ -373,9 +373,10 @@ Production implementation shall not begin until:
 | 0.2.0 | 2026-08-08 | Assigned Change ID CHG-013, governing this existing Draft's retention and tracking. No specification text changed; Status remains Draft (Pending Internal Review and Architecture Approval). | Chief Architect / Product Owner | CHG-013 |
 | 0.2.0 | 2026-08-08 | Corrected `Referenced By` from "None identified" to the verified direct-consumer inventory established by CHG-015 §3.1. | Chief Architect / Product Owner | CHG-015 |
 | 0.2.0 | 2026-08-08 | Added SPEC-009 as the required detailed elaboration of the existing extension-package contract and as a direct consumer; no upstream requirement or invariant changed. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Under CHG-029: approved the existing system-level behavioral contract; added ADR-004 as a direct dependency, recorded CHG-029 as a consumer, and updated approval-sensitive wording without changing requirements, invariants, behavior, ownership, or implementation gates. | Chief Architect / Product Owner | CHG-029 |
 
 ## 24. Current Disposition
 
-**Draft — Pending Internal Review and Architecture Approval.**
+**Approved.**
 
-This artifact is substantive but non-governing. Its creation on the local Draft branch does not close Phase C4, approve AR-SYS-001, authorize implementation, or alter the state of any approved artifact.
+This artifact is the authoritative system-level behavioral contract within its Level 5 scope. It does not authorize implementation, vendor selection, release, or relaxation of the entry criteria in §21.
