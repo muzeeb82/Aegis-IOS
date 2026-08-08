@@ -3,15 +3,15 @@
 ```text
 Document ID: CHG-044
 Title: Authorize Increment I1 Identity, Authorization, Audit, and Record Foundation
-Version: 0.1.0
-Status: Draft — Pending Review
+Version: 1.0.0
+Status: Approved — Pending Implementation
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, ADR-006, SPEC-001, SPEC-002, SPEC-004, SPEC-008, STD-001, IMP-001, CHG-036
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change Lifecycle State: Draft
+Change Lifecycle State: Approved — Pending Implementation
 ```
 
 ## 1. Change Record
@@ -36,6 +36,7 @@ Increment I1 may implement the following foundations, and only these foundations
 - replaceable interfaces for federated human and workload identity, without selecting or connecting an identity provider;
 - deny-by-default authorization evaluation over principal, role, action, resource, scope, sensitivity, lifecycle state, and separation-of-duty policy;
 - tamper-evident audit-event capture for authentication, authorization changes, denied privileged actions, and policy changes;
+- a bounded threat-model review for the I1 identity, authorization, audit, and persistence boundaries, without representing the full SPEC-004 production release gate as complete;
 - unit, integration, authorization-negative-path, migration, and evidence-record tests that demonstrate the bounded controls.
 
 ## 3. Explicit Boundaries
@@ -65,24 +66,30 @@ I1 does not authorize a user-facing sign-in experience, a live identity provider
 - Requirement and specification traceability for each implemented module and test.
 - Executed unit and integration results for identity references, authorization denial, separation of duty, audit evidence, persistence, and migrations.
 - Executed synthetic-data migration, recovery or rollback, and reconciliation evidence.
+- A reviewed I1 threat model covering identity spoofing, privilege escalation, tampering, repudiation, injection, and audit destruction at the implemented boundaries.
 - Evidence records conforming to the SPEC-008 §3 template.
 - A review showing no live provider, product workflow, production data, or production deployment entered scope.
 - Passing CI quality, secret-scanning, dependency-audit, and repository-hygiene checks.
 
 ## 6. Review Activity
 
-Review Result: Pending.
+Review Result: Passed.
 
-This Draft is ready for independent review. Approval must identify the precise implementation scope, required evidence, approving authority, and approval date before any I1 implementation begins.
+Review cross-checked the proposed scope against ADR-004's modular-core, deny-by-default, immutable-record, and replaceable-adapter boundaries; ADR-006's TypeScript/Node and PostgreSQL stack decision; SPEC-002's common envelope and Identity-domain aggregates; SPEC-004's identity, authorization, audit-evidence, and threat-control requirements; SPEC-008's evidence requirements; and IMP-001's I1 delivery and exit-evidence definition. No product requirement, interface contract, provider, vendor, or production capability is introduced or redefined.
+
+One finding was corrected before approval: the Draft required authorization and audit tests but did not explicitly require threat-model evidence for this security-sensitive increment. The scope and required-evidence sections now require a bounded I1 threat-model review while preserving the full SPEC-004 release gate as future work.
 
 ## 7. Approval Activity
 
-Approval Result: Pending.
+Approval Result: Approved.
 
-No implementation is authorized by this Draft.
+Decision Authority: Chief Architect / Product Owner. Approval Date: 2026-08-08. Authority Basis: GOV-001, GOV-002, ADR-004, ADR-006, SPEC-002, SPEC-004, SPEC-008, IMP-001, and completion of CHG-036.
+
+Authorized scope is exactly §2, subject to the explicit boundaries in §3 and evidence in §5. Approval authorizes I1 foundation implementation only; it does not authorize any excluded product capability, live provider, production data, production infrastructure, release, or vendor decision. Validation must be executed and recorded before this change can close.
 
 ## 8. Revision History
 
 | Version | Date | Change | Author | Change ID |
 |---|---|---|---|---|
 | 0.1.0 | 2026-08-08 | Initial Draft proposing a bounded I1 identity, authorization, audit, and record-foundation increment derived from the approved implementation plan and specifications. | Chief Architect / Engineering Owner | CHG-044 |
+| 1.0.0 | 2026-08-08 | Review passed after direct cross-check against the approved architecture, stack, specification, validation, and implementation-plan boundaries. Added bounded I1 threat-model evidence as a required control; approved the exact scope for implementation. | Chief Architect / Product Owner | CHG-044 |
