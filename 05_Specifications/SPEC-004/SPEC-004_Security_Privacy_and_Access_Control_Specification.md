@@ -3,15 +3,15 @@
 ```text
 Document ID: SPEC-004
 Title: Security, Privacy, and Access-Control Specification
-Version: 0.1.0
-Status: Draft (Pending Internal Review and Architecture Approval)
+Version: 1.0.0
+Status: Approved
 Owner: Chief Architect / Product Owner
 Classification: Normative
 Authority Level: Level 5
-Depends On: PRD-001, SPEC-001, SPEC-002, SPEC-003, AR-SYS-001
+Depends On: PRD-001, ADR-004, SPEC-001, SPEC-002, SPEC-003, AR-SYS-001
 Referenced By: CHG-016, SPEC-005, SPEC-006, SPEC-007, SPEC-008, SPEC-009, AR-PKG-001, RRC-001
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-032
 ```
 
 ## 1. Security Objectives
@@ -68,3 +68,4 @@ Authentication, authorization changes, denied privileged actions, secret use, pr
 | 0.1.0 | 2026-08-08 | Corrected `Referenced By` to the verified direct-consumer inventory established by CHG-015 §3.1 (added CHG-016, AR-PKG-001, RRC-001). | Chief Architect / Product Owner | CHG-015 |
 | 0.1.0 | 2026-08-08 | Corrected the undefined Draft-status qualifier from `Threat Review` to the established `Architecture Approval` wording; preserved the §8 threat-model release gate unchanged. | Chief Architect / Product Owner | CHG-016 |
 | 0.1.0 | 2026-08-08 | Added SPEC-009 as a verified direct consumer for extension-package permission controls. | Chief Architect / Product Owner | CHG-018 |
+| 1.0.0 | 2026-08-08 | Under CHG-032: approved the existing security, privacy, and access-control contract; added ADR-004 as a direct dependency and retained all security release gates as future execution evidence. | Chief Architect / Product Owner | CHG-032 |
