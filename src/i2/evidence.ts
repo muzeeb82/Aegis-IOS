@@ -57,7 +57,9 @@ function requireValue(value: string, field: string): void {
 
 export function createProvenance(
   provenance: ProvenanceRecord,
+  authorization: AuthorizationEvidence,
 ): ProvenanceRecord {
+  requireAuthorization(authorization);
   for (const [value, field] of Object.entries(provenance)) {
     requireValue(String(value), field);
   }
@@ -66,7 +68,9 @@ export function createProvenance(
 
 export function createTransformation(
   transformation: TransformationRecord,
+  authorization: AuthorizationEvidence,
 ): TransformationRecord {
+  requireAuthorization(authorization);
   for (const [value, field] of [
     [transformation.id, 'id'],
     [transformation.outputRevisionId, 'outputRevisionId'],

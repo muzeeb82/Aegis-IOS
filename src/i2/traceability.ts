@@ -19,7 +19,13 @@ export interface TypedRelationship {
 
 export function createTypedRelationship(
   relationship: TypedRelationship,
+  authorization: AuthorizationEvidence,
 ): TypedRelationship {
+  if (!authorization.permitted) {
+    throw new Error(
+      `Unauthorized traceability operation: ${authorization.reason}`,
+    );
+  }
   for (const [value, field] of [
     [relationship.id, 'id'],
     [relationship.fromId, 'fromId'],
@@ -58,3 +64,4 @@ export function traverseFrom(
   }
   return Object.freeze(result);
 }
+import type { AuthorizationEvidence } from './decision.js';

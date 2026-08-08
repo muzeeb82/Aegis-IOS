@@ -79,6 +79,27 @@ describe('I2 decision lifecycle and revisions', () => {
     });
   });
 
+  it('rejects unauthorized and closed-state revision overwrite attempts (AC-001)', () => {
+    const original = createDecision(draftDecision(), permitted);
+    const closed = { ...original, lifecycleState: 'Closed' as const };
+    const revision = {
+      proposal: original.proposal,
+      alternatives: original.alternatives,
+      reasoning: original.reasoning,
+      assumptions: original.assumptions,
+      constraints: original.constraints,
+      risks: original.risks,
+      evidenceRevisions: original.evidenceRevisions,
+    };
+
+    expect(() =>
+      reviseDecision(original, revision, 'synthetic', denied),
+    ).toThrow('Unauthorized decision operation');
+    expect(() =>
+      reviseDecision(closed, revision, 'synthetic', permitted),
+    ).toThrow('Decision revision is not permitted in Closed');
+  });
+
   it('permits a valid, evidenced transition and rejects invalid or unauthorized transitions (AC-004)', () => {
     const draft = createDecision(draftDecision(), permitted);
     const ready = transitionDecision(

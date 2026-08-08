@@ -21,6 +21,9 @@ CREATE TABLE i2_decisions (
 
 CREATE TABLE i2_decision_revisions (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'DecisionRevision',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   decision_id text NOT NULL REFERENCES i2_decisions(id),
   revision integer NOT NULL CHECK (revision > 0),
   proposal text NOT NULL,
@@ -36,12 +39,21 @@ CREATE TABLE i2_decision_revisions (
   correction_reason text,
   created_at timestamptz NOT NULL,
   created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
   integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb,
   UNIQUE (decision_id, revision)
 );
 
 CREATE TABLE i2_decision_transitions (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'DecisionTransition',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   decision_id text NOT NULL REFERENCES i2_decisions(id),
   decision_revision integer NOT NULL CHECK (decision_revision > 0),
   from_state text NOT NULL,
@@ -49,23 +61,43 @@ CREATE TABLE i2_decision_transitions (
   actor_id text NOT NULL,
   occurred_at timestamptz NOT NULL,
   evidence_id text NOT NULL,
+  created_at timestamptz NOT NULL,
+  created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
   correlation_id text NOT NULL,
-  integrity_token text NOT NULL
+  integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE TABLE i2_approvals (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'Approval',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   decision_id text NOT NULL REFERENCES i2_decisions(id),
   decision_revision integer NOT NULL CHECK (decision_revision > 0),
   authority_id text NOT NULL,
   evidence_id text NOT NULL,
   recorded_at timestamptz NOT NULL,
-  integrity_token text NOT NULL
+  created_at timestamptz NOT NULL,
+  created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
+  integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE TABLE i2_provenance (
   id text PRIMARY KEY,
   record_type text NOT NULL DEFAULT 'Provenance',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   source_identity text NOT NULL,
   source_type text NOT NULL,
   source_timestamp timestamptz NOT NULL,
@@ -73,8 +105,15 @@ CREATE TABLE i2_provenance (
   acquisition_method text NOT NULL,
   content_hash text NOT NULL,
   responsible_actor text NOT NULL,
+  created_at timestamptz NOT NULL,
+  created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
   sensitivity text NOT NULL,
-  integrity_token text NOT NULL
+  integrity_token text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE TABLE i2_evidence (
@@ -88,12 +127,19 @@ CREATE TABLE i2_evidence (
   sensitivity text NOT NULL,
   created_at timestamptz NOT NULL,
   created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
   correlation_id text NOT NULL,
-  integrity_token text NOT NULL
+  integrity_token text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE TABLE i2_evidence_revisions (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'EvidenceRevision',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   evidence_id text NOT NULL REFERENCES i2_evidence(id),
   revision integer NOT NULL CHECK (revision > 0),
   ingested_at timestamptz NOT NULL,
@@ -103,28 +149,54 @@ CREATE TABLE i2_evidence_revisions (
   correction_reason text,
   created_at timestamptz NOT NULL,
   created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
   integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb,
   UNIQUE (evidence_id, revision)
 );
 
 CREATE TABLE i2_transformations (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'Transformation',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   input_revision_ids jsonb NOT NULL,
   output_revision_id text NOT NULL,
   method text NOT NULL,
   occurred_at timestamptz NOT NULL,
   actor_id text NOT NULL,
-  integrity_token text NOT NULL
+  created_at timestamptz NOT NULL,
+  created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
+  integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb
 );
 
 CREATE TABLE i2_typed_relationships (
   id text PRIMARY KEY,
+  record_type text NOT NULL DEFAULT 'TypedRelationship',
+  schema_version integer NOT NULL DEFAULT 1 CHECK (schema_version > 0),
+  lifecycle_state text NOT NULL,
   from_id text NOT NULL,
   to_id text NOT NULL,
   relationship_type text NOT NULL,
   created_at timestamptz NOT NULL,
   created_by text NOT NULL,
+  updated_at timestamptz NOT NULL,
+  updated_by text NOT NULL,
+  effective_at timestamptz,
+  correlation_id text NOT NULL,
   integrity_token text NOT NULL,
+  sensitivity text NOT NULL,
+  typed_references jsonb NOT NULL DEFAULT '[]'::jsonb,
   CHECK (from_id <> to_id)
 );
 
