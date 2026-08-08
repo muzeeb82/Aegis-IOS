@@ -4,14 +4,14 @@
 Document ID: IMP-001
 Title: Implementation, Test, and Release Plan
 Version: 0.1.0
-Status: Draft (Planning Only; Implementation Not Authorized)
+Status: Approved (Planning Only; Implementation Requires GOV-002 Authorization)
 Owner: Chief Architect / Engineering Owner
 Classification: Informational
 Authority Level: Not Applicable — Planning artifact outside normative hierarchy
 Depends On: GOV-002, GOV-004, ADR-004, SPEC-001, SPEC-008, STD-001
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## Scope

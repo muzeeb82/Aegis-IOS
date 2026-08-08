@@ -4,14 +4,14 @@
 Document ID: EX-001
 Title: Governed Decision Worked Example
 Version: 0.1.0
-Status: Draft (Illustrative; Pending Internal Review)
+Status: Approved (Illustrative)
 Owner: Product Owner / Training Owner
 Classification: Informational
 Authority Level: Not Applicable — Illustrative artifact outside normative hierarchy
 Depends On: FRM-001, PB-001, SPEC-001
 Referenced By: TRN-001 (proposed)
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## 1. Scenario

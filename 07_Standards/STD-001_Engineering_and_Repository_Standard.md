@@ -4,14 +4,14 @@
 Document ID: STD-001
 Title: Engineering and Repository Standard
 Version: 0.1.0
-Status: Draft (Pending Internal Review)
+Status: Approved
 Owner: Chief Architect
 Classification: Normative
 Authority Level: Level 7
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, ADR-004, SPEC-001, SPEC-008
 Referenced By: IMP-001 (proposed)
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## Purpose

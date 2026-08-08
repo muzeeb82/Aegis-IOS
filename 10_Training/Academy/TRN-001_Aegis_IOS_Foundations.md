@@ -4,14 +4,14 @@
 Document ID: TRN-001
 Title: Aegis IOS Foundations
 Version: 0.1.0
-Status: Draft (Pending Internal Review)
+Status: Approved
 Owner: Training Owner / Product Owner
 Classification: Informational
 Authority Level: Not Applicable — Training artifact outside normative hierarchy
 Depends On: CONST-001, GOV-001, PRD-001, SPEC-001, FRM-001, PB-001, EX-001
 Referenced By: None identified
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## 1. Audience and Outcomes

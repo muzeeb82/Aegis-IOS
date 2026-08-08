@@ -4,14 +4,14 @@
 Document ID: FRM-001
 Title: Governed Investment Decision Framework
 Version: 0.1.0
-Status: Draft (Pending Internal Review)
+Status: Approved
 Owner: Product Owner / Investment Framework Owner
 Classification: Normative
 Authority Level: Level 6
 Depends On: GOV-001, PRD-001, SPEC-001
 Referenced By: PB-001, EX-001, TRN-001 (proposed)
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## 1. Purpose

@@ -4,14 +4,14 @@
 Document ID: PB-001
 Title: Governed Decision Operations Playbook
 Version: 0.1.0
-Status: Draft (Pending Internal Review)
+Status: Approved
 Owner: Product Owner / Operations Owner
 Classification: Normative
 Authority Level: Level 8
 Depends On: GOV-001, FRM-001, SPEC-001, SPEC-007
 Referenced By: EX-001, TRN-001 (proposed)
 Last Updated: 2026-08-08
-Change ID: Not assigned — unapproved Draft
+Change ID: CHG-035
 ```
 
 ## Purpose
