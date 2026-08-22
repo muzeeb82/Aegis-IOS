@@ -3,7 +3,7 @@
 ```text
 Document ID: RFC-002
 Title: I1 Authorization-Evidence Lifecycle and Scope
-Version: 0.2.2
+Version: 0.2.3
 Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational
@@ -11,7 +11,7 @@ Authority Level: Not Applicable — RFC outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, SPEC-002, SPEC-004, CHG-044, CHG-047, CHG-048
 Referenced By: AR-I1-001
 Related Change ID: CHG-048
-Last Updated: 2026-08-09
+Last Updated: 2026-08-22
 ```
 
 ## 1. Problem and Current State
@@ -62,6 +62,12 @@ Expiry, revocation, and scope-matching cases for I3 AC-005/006 are governance-bl
 
 Consultation has not begun. Before `In Review`, GOV-004 §19 inputs, affected owners, reviewers, consultation window, Full Architecture Review record, evidence plan, dissent handling, and decision criteria must be prepared. Resulting ADRs: none. A Draft ADR may be created only after RFC-002 reaches `Approved for Decision` under GOV-004 §25.1.
 
+### 9.1 Consultation Window Rebaseline
+
+The proposed 2026-08-11 through 2026-08-15 window elapsed without the separate PR #10 opening notice and status transition required by AR-I1-001 §7.2. Consultation did not open. RFC-002 remains `Draft`, no participant response is due under the elapsed proposal, and no consent, dissent disposition, review result, or decision readiness may be inferred.
+
+A replacement window must use future timestamps and may be recorded only after a named independent reviewer accepts the role and confirms access to every immutable evidence input. The reviewed opening package must preserve the response channel, non-response treatment, dissent handling, extension/suspension behavior, evaluation criteria, and disposition ownership before RFC-002 may transition to `In Review`.
+
 ## 10. Revision History
 
 | Version | Date | Change | Author |
@@ -70,3 +76,4 @@ Consultation has not begun. Before `In Review`, GOV-004 §19 inputs, affected ow
 | 0.2.0 | 2026-08-09 | Revision Required addressed: completed Draft RFC structure, qualification, alternatives, impacts, consultation path, and blocked-case treatment. | Chief Architect / Engineering Owner |
 | 0.2.1 | 2026-08-09 | Corrected informational Authority Level and specified the GOV-004 §25.1 Approved-for-Decision prerequisite for a Draft ADR. | Chief Architect / Engineering Owner |
 | 0.2.2 | 2026-08-09 | Added AR-I1-001 as the required Full Architecture Review consumer. | Chief Architect / Engineering Owner |
+| 0.2.3 | 2026-08-22 | Rebaselined the elapsed proposed consultation window; consultation remained unopened and a new independently reviewed future window is required. | Chief Architect / Engineering Owner |

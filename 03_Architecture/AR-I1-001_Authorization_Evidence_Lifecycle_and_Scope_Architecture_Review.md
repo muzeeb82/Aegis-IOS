@@ -3,7 +3,7 @@
 ```text
 Document ID: AR-I1-001
 Title: Authorization-Evidence Lifecycle and Scope Architecture Review
-Version: 0.2.2
+Version: 0.2.3
 Status: Draft
 Owner: Architecture Review Lead
 Classification: Informational
@@ -12,7 +12,7 @@ Depends On: GOV-001, GOV-002, GOV-003, GOV-004, CHG-044, CHG-047, CHG-048, RFC-0
 Referenced By: None identified
 Related Change ID: CHG-048
 Related RFC: RFC-002
-Last Updated: 2026-08-09
+Last Updated: 2026-08-22
 ```
 
 ## 1. Architecture Question and Significance
@@ -103,6 +103,12 @@ The named operating roles are held by Muzeeb ur Rahman Farooqi; the independent-
 
 If this opening action is accepted in review, the Architecture Review Lead must make a separate, dated PR #10 top-level opening notice that identifies: this governing record at its then-current commit; the Architecture Review Lead; participating role holders and the non-independent-validation limitation; the authoritative response channel; the confirmed closing timestamp; the non-response and dissent rules; and the §7.1 evidence bundle. In that same recorded action, AR-I1-001 and RFC-002 may transition from `Draft` to `In Review`, and consultation may begin. Until then, both artifacts remain `Draft` and consultation is not open.
 
+### 7.3 Elapsed Window Rebaseline — Consultation Not Opened
+
+The proposed opening and closing timestamps in §7.1 elapsed without the separate, dated top-level PR #10 opening notice required by §7.2. AR-I1-001 and RFC-002 remained `Draft`; consultation did not open. The elapsed proposal creates no response obligation, no consent, no dissent disposition, no non-response finding, and no review or decision-readiness outcome.
+
+Before a replacement consultation may open, this record must identify a named independent reviewer who accepts the role and confirms access to every immutable §7.1 evidence input. It must then record newly reviewed future opening and closing timestamps and preserve the response channel, non-response rule, dissent rule, extension/suspension rule, evaluation criteria, and disposition owner. If the independent reviewer or any mandatory evidence input is unavailable at the proposed opening time, consultation remains unopened and the artifacts remain `Draft`.
+
 ## 8. Decision Readiness and Disposition
 
 Readiness requires completed evidence review, alternatives analysis, affected-owner input, risks and migration/recovery implications, dissent disposition, explicit recommendation, and no unresolved blocker. The review may dispose: RFC required, additional evidence required, revision required, or decision-ready. RFC-002 may reach `Approved for Decision` only after its own consultation and this review confirm readiness; only then may a Draft ADR be created.
@@ -126,3 +132,4 @@ Readiness requires completed evidence review, alternatives analysis, affected-ow
 | 0.2.0 | 2026-08-09 | Added Draft-only consultation setup: named role holders, overlap limitation and compensating review, evidence inputs, proposed dates, PR #10 channel, response handling, and disposition controls. Consultation remains unopened. | Architecture Review Lead |
 | 0.2.1 | 2026-08-09 | Corrected consultation lifecycle ordering and replaced mutable SPEC references with immutable versioned commit references. Dates remain proposed pending verified availability and evidence access. | Architecture Review Lead |
 | 0.2.2 | 2026-08-09 | Recorded availability and evidence-access confirmation and added a Draft opening action for review. No status transition or consultation opening occurred. | Architecture Review Lead |
+| 0.2.3 | 2026-08-22 | Rebaselined the elapsed proposed consultation window, confirmed that consultation never opened, and required a new future window plus an available independent reviewer before opening. | Architecture Review Lead |

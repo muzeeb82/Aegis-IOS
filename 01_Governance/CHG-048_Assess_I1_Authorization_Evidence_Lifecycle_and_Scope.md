@@ -3,14 +3,14 @@
 ```text
 Document ID: CHG-048
 Title: Assess I1 Authorization-Evidence Lifecycle and Scope
-Version: 0.2.2
+Version: 0.2.3
 Status: Draft
 Owner: Chief Architect / Engineering Owner
 Classification: Informational — Change Record
 Authority Level: Not Applicable — Change Record outside normative authority hierarchy
 Depends On: GOV-001, GOV-002, GOV-003, GOV-004, SPEC-002, SPEC-004, CHG-044, CHG-047
 Referenced By: RFC-002, AR-I1-001
-Last Updated: 2026-08-09
+Last Updated: 2026-08-22
 Change Lifecycle State: Draft
 ```
 
@@ -66,3 +66,10 @@ Review Result: Revision Required. The initial Draft lacked complete initiation, 
 | 0.2.0 | 2026-08-09 | Revision Required addressed: completed metadata, assessment-only proposal, Full Architecture Review qualification, impacts, risks, validation, and required decision path. | Chief Architect / Engineering Owner | CHG-048 |
 | 0.2.1 | 2026-08-09 | Corrected the artifact Status to the canonical Draft maturity state; §7 retains the Revision Required review result. | Chief Architect / Engineering Owner | CHG-048 |
 | 0.2.2 | 2026-08-09 | Added AR-I1-001 as the required Full Architecture Review consumer. | Chief Architect / Engineering Owner | CHG-048 |
+| 0.2.3 | 2026-08-22 | Rebaselined the elapsed Draft consultation window without claiming that consultation opened; a new reviewed window and independent reviewer remain required. | Chief Architect / Engineering Owner | CHG-048 |
+
+## 9. Consultation Rebaseline
+
+The proposed 2026-08-11 10:00 IST through 2026-08-15 18:00 IST consultation window elapsed without the separate top-level PR #10 opening notice required by AR-I1-001 §7.2. No status transition to `In Review` was recorded. Consultation therefore did not open, no response or non-response disposition accrued under that proposed window, and no review or decision-readiness outcome may be inferred from the passage of time.
+
+CHG-048 remains `Draft`. Before consultation may open, AR-I1-001 and RFC-002 must record a newly reviewed future window, a named independent reviewer, verified access to the immutable evidence inputs, and the required response, dissent, non-response, extension, suspension, and disposition controls. This rebaseline does not authorize an ADR, I1/I3 implementation, or AC-005/006 unblocking.
